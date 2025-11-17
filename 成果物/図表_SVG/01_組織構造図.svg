@@ -42,7 +42,7 @@
 
   <!-- タイトル -->
   <text x="700" y="30" class="title" text-anchor="middle">イカリ消毒株式会社 組織構造図</text>
-  <text x="700" y="50" class="subtitle" text-anchor="middle">2025年1月時点</text>
+  <text x="700" y="50" class="subtitle" text-anchor="middle">2025年4月1日改定版</text>
 
   <!-- 代表取締役社長 -->
   <rect x="600" y="80" width="200" height="60" class="exec-box" rx="5"/>
@@ -50,6 +50,10 @@
   <text x="700" y="125" class="text-white" text-anchor="middle">黒澤 秀行</text>
 
   <!-- 取締役 -->
+  <rect x="50" y="80" width="150" height="60" class="exec-box" rx="5"/>
+  <text x="125" y="105" class="text-white" text-anchor="middle">監査役</text>
+  <text x="125" y="125" class="text-white" text-anchor="middle">内野 長治</text>
+
   <rect x="250" y="80" width="150" height="60" class="exec-box" rx="5"/>
   <text x="325" y="105" class="text-white" text-anchor="middle">取締役</text>
   <text x="325" y="125" class="text-white" text-anchor="middle">車谷 悟史</text>
@@ -165,6 +169,7 @@
     <text x="70" y="1560" style="font-family: 'Yu Gothic', sans-serif; font-size: 11px; fill: #34495e;">
       ④ ISO9001、ISO27001、ISO/IEC17025等の国際認証を保持
     </text>
+    <text x="1340" y="1560" style="font-family: 'Yu Gothic', sans-serif; font-size: 10px; fill: #7f8c8d;" text-anchor="end">出典: ㊙会社組織図（2025/4/1）</text>
   </g>
 
   <!-- 凡例 -->

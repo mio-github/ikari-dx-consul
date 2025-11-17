@@ -58,7 +58,7 @@
 
   <!-- タイトル -->
   <text x="900" y="40" text-anchor="middle" class="title">イカリ消毒 現行システム構成図</text>
-  <text x="900" y="65" text-anchor="middle" class="subtitle">2023年時点（DX構想資料より）</text>
+  <text x="900" y="65" text-anchor="middle" class="subtitle">2022年7月29日時点（DX構想資料より）</text>
 
   <!-- 凡例 -->
   <g transform="translate(50, 90)">
@@ -366,8 +366,19 @@
     <text x="1200" y="83" class="label" fill="#e74c3c" font-size="9px">手作業連携が課題</text>
   </g>
 
+  <!-- クラウド/ツール補足（2025/09資料より） -->
+  <g transform="translate(50, 1180)">
+    <rect x="0" y="0" width="1700" height="145" fill="#f7fbff" stroke="#9cc1e6" stroke-width="1.5" rx="5"/>
+    <text x="850" y="25" text-anchor="middle" class="section-title">【主要クラウド / SaaS・ツール（2025/9/1 情報システム導入ツールより）】</text>
+    <text x="80" y="55" class="label" font-size="10px">・Actionista! / Tableau / Power BI / Clipchamp（データ分析・可視化）</text>
+    <text x="80" y="72" class="label" font-size="10px">・DataSpider / dbSheet / RDIUS / Smart at tools（連携・業務自動化）</text>
+    <text x="80" y="89" class="label" font-size="10px">・Zoom / Microsoft Teams / ChatGPT / Copilot（コミュニケーション/生成AI）</text>
+    <text x="80" y="106" class="label" font-size="10px">・SmartHR / sonarATS / インタビューメーカー / eラーニング（人事・育成）</text>
+    <text x="80" y="123" class="label" font-size="10px">・Box / AWS / FortiGate / SiteGuardLite / SD-WAN（インフラ・セキュリティ）</text>
+  </g>
+
   <!-- フッター -->
   <rect x="0" y="2350" width="1800" height="50" fill="#ecf0f1"/>
-  <text x="900" y="2375" text-anchor="middle" class="label" font-size="12px">イカリ消毒株式会社 現行システム構成図（2023年時点）</text>
-  <text x="900" y="2390" text-anchor="middle" class="label" font-size="10px">出典: ㊙IKR_DX構想_現行システム構成.pptx | ㊙社外秘</text>
+  <text x="900" y="2375" text-anchor="middle" class="label" font-size="12px">イカリ消毒株式会社 現行システム構成図（2022年7月29日時点）</text>
+  <text x="900" y="2390" text-anchor="middle" class="label" font-size="10px">出典: ㊙IKR_DX構想_現行システム構成.pptx（2022/7/29） / ㊙情報システム導入ツール 2025_09_01時点.pptx</text>
 </svg>

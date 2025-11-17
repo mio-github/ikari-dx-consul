@@ -115,6 +115,30 @@
     <line x1="800" y1="280" x2="750" y2="200" class="line" marker-end="url(#arrowhead)"/>
   </g>
 
+  <!-- SaaS / ツール詳細 -->
+  <g id="saas-detail">
+    <rect x="420" y="380" width="560" height="130" fill="#f7fbff" stroke="#9cc1e6" stroke-width="1.5" rx="5"/>
+    <text x="700" y="405" text-anchor="middle" style="font-family: 'Yu Gothic', sans-serif; font-size: 12px; font-weight: bold; fill: #2c3e50;">主要クラウド / SaaSツール</text>
+    <text x="440" y="430" style="font-family: 'Yu Gothic', sans-serif; font-size: 10px; fill: #34495e;">
+      ・Actionista! / Tableau / Power BI（分析・ダッシュボード）
+    </text>
+    <text x="440" y="450" style="font-family: 'Yu Gothic', sans-serif; font-size: 10px; fill: #34495e;">
+      ・DataSpider / dbSheet / RDIUS / Smart at tools（連携・開発）
+    </text>
+    <text x="440" y="470" style="font-family: 'Yu Gothic', sans-serif; font-size: 10px; fill: #34495e;">
+      ・Zoom / Teams / ChatGPT / Copilot（コミュニケーション/生成AI）
+    </text>
+    <text x="440" y="490" style="font-family: 'Yu Gothic', sans-serif; font-size: 10px; fill: #34495e;">
+      ・SmartHR / sonarATS / インタビューメーカー / eラーニング（人事・育成）
+    </text>
+    <text x="440" y="510" style="font-family: 'Yu Gothic', sans-serif; font-size: 10px; fill: #34495e;">
+      ・Box / FortiGate / SiteGuardLite / SD-WAN（セキュリティ・ファイル共有）
+    </text>
+    <text x="700" y="530" text-anchor="middle" style="font-family: 'Yu Gothic', sans-serif; font-size: 9px; fill: #7f8c8d;">
+      出典: ㊙情報システム導入ツール 2025_09_01時点.pptx
+    </text>
+  </g>
+
   <!-- セキュリティ層 -->
   <g id="security-layer">
     <rect x="100" y="650" width="1200" height="120" class="security" rx="10"/>
