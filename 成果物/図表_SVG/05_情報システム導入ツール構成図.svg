@@ -1,0 +1,715 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 3200" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      /* テキストスタイル */
+      .title { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 28px; font-weight: bold; fill: #1a1a1a; }
+      .subtitle { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 16px; fill: #666; }
+      .section-title { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 20px; font-weight: bold; fill: #1A43AA; }
+      .area-label { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 14px; font-weight: bold; fill: #1A43AA; }
+
+      /* 推奨配色パターン：青系モノトーン + ブルーグリーン×オレンジ */
+      /* 濃青 #1A43AA / 明青 #15A2E9 / ブルーグリーン #33BEC5 / オレンジ #F17C1D / グレー #708090 */
+
+      /* 基幹システム：濃青（最重要） */
+      .core-system { fill: #1A43AA; stroke: #0d2459; stroke-width: 2; }
+      .core-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 11px; font-weight: bold; fill: white; }
+
+      /* データセンター基盤：明青 */
+      .datacenter-system { fill: #15A2E9; stroke: #0d7ab8; stroke-width: 2; }
+      .datacenter-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 10px; fill: white; }
+
+      /* クラウドサービス（Office365, AWS）：ブルーグリーン */
+      .cloud-system { fill: #33BEC5; stroke: #268b91; stroke-width: 1.5; }
+      .cloud-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 9px; fill: white; }
+
+      /* 外部サービス・SaaS：薄青 */
+      .saas-system { fill: #a8dff8; stroke: #5ec4f5; stroke-width: 1; }
+      .saas-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 8px; fill: #1a1a1a; }
+
+      /* セキュリティ：グレー */
+      .security-system { fill: #708090; stroke: #576370; stroke-width: 2; }
+      .security-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 9px; fill: white; }
+
+      /* ネットワーク：枠のみ */
+      .network-area { fill: none; stroke: #1A43AA; stroke-width: 3; stroke-dasharray: 10,5; }
+      .network-label { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 12px; fill: #1A43AA; font-weight: bold; }
+
+      /* 拠点：オレンジ */
+      .site-box { fill: #F17C1D; stroke: #c06217; stroke-width: 1.5; }
+      .site-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 9px; fill: white; }
+
+      /* 接続線 */
+      .connection { stroke: #1A43AA; stroke-width: 2; fill: none; }
+      .cloud-connection { stroke: #33BEC5; stroke-width: 2; fill: none; stroke-dasharray: 5,3; }
+
+      /* 小サイズテキスト */
+      .small-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 7px; fill: white; }
+      .tiny-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 6px; fill: #333; }
+    </style>
+  </defs>
+
+  <!-- タイトル -->
+  <text x="1200" y="40" text-anchor="middle" class="title">イカリ消毒 情報システム導入ツール構成図</text>
+  <text x="1200" y="65" text-anchor="middle" class="subtitle">運用構成図（2025年9月1日時点）</text>
+
+  <!-- 凡例 -->
+  <g transform="translate(50, 85)">
+    <rect x="0" y="0" width="140" height="25" class="core-system" rx="3"/>
+    <text x="70" y="16" text-anchor="middle" class="core-text" font-size="10px">基幹システム</text>
+
+    <rect x="150" y="0" width="140" height="25" class="datacenter-system" rx="3"/>
+    <text x="220" y="16" text-anchor="middle" class="datacenter-text" font-size="10px">データセンター</text>
+
+    <rect x="300" y="0" width="140" height="25" class="cloud-system" rx="3"/>
+    <text x="370" y="16" text-anchor="middle" class="cloud-text" font-size="10px">クラウド基盤</text>
+
+    <rect x="450" y="0" width="120" height="25" class="saas-system" rx="3"/>
+    <text x="510" y="16" text-anchor="middle" class="saas-text" font-size="10px">SaaS</text>
+
+    <rect x="580" y="0" width="120" height="25" class="security-system" rx="3"/>
+    <text x="640" y="16" text-anchor="middle" class="security-text" font-size="10px">セキュリティ</text>
+
+    <rect x="710" y="0" width="100" height="25" class="site-box" rx="3"/>
+    <text x="760" y="16" text-anchor="middle" class="site-text" font-size="10px">拠点</text>
+  </g>
+
+  <!-- ========== データセンター領域 ========== -->
+  <rect x="50" y="130" width="800" height="900" class="network-area" rx="10"/>
+  <text x="450" y="155" text-anchor="middle" class="section-title">【データセンター】</text>
+
+  <!-- 基幹システム群 -->
+  <g transform="translate(100, 180)">
+    <text x="0" y="0" class="area-label">■基幹システム</text>
+
+    <!-- 総合経営管理システム -->
+    <rect x="0" y="10" width="200" height="80" class="core-system" rx="5"/>
+    <text x="100" y="30" text-anchor="middle" class="core-text" font-size="12px">総合経営管理システム</text>
+    <text x="100" y="45" text-anchor="middle" class="small-text">・見積・契約管理</text>
+    <text x="100" y="55" text-anchor="middle" class="small-text">・売上・請求管理</text>
+    <text x="100" y="65" text-anchor="middle" class="small-text">・データビジュアル化</text>
+    <text x="100" y="75" text-anchor="middle" class="small-text">管理: 情報システムG</text>
+
+    <!-- 人事給与会計 -->
+    <rect x="220" y="10" width="160" height="80" class="core-system" rx="5"/>
+    <text x="300" y="30" text-anchor="middle" class="core-text" font-size="11px">人事給与会計</text>
+    <text x="300" y="45" text-anchor="middle" class="small-text">・給与計算</text>
+    <text x="300" y="55" text-anchor="middle" class="small-text">・会計処理</text>
+    <text x="300" y="65" text-anchor="middle" class="small-text">・財務管理</text>
+
+    <!-- イカリナビシステム -->
+    <rect x="400" y="10" width="180" height="80" class="datacenter-system" rx="5"/>
+    <text x="490" y="30" text-anchor="middle" class="datacenter-text" font-size="11px">イカリナビシステム</text>
+    <text x="490" y="45" text-anchor="middle" class="small-text">・社内情報共有</text>
+    <text x="490" y="55" text-anchor="middle" class="small-text">・ID・アクセス権管理</text>
+    <text x="490" y="65" text-anchor="middle" class="small-text">・ナビゲーション</text>
+    <text x="490" y="75" text-anchor="middle" class="small-text">管理: 情報システムG</text>
+  </g>
+
+  <!-- 情報基盤サーバー -->
+  <g transform="translate(100, 300)">
+    <text x="0" y="0" class="area-label">■情報基盤</text>
+
+    <!-- Active Directory -->
+    <rect x="0" y="10" width="180" height="70" class="datacenter-system" rx="5"/>
+    <text x="90" y="28" text-anchor="middle" class="datacenter-text" font-size="10px">Active Directory</text>
+    <text x="90" y="41" text-anchor="middle" class="small-text">・ユーザー管理</text>
+    <text x="90" y="50" text-anchor="middle" class="small-text">・パスワードポリシー</text>
+    <text x="90" y="59" text-anchor="middle" class="small-text">・Windowsパッチ</text>
+
+    <!-- ファイルサーバー -->
+    <rect x="200" y="10" width="160" height="70" class="datacenter-system" rx="5"/>
+    <text x="280" y="28" text-anchor="middle" class="datacenter-text" font-size="10px">ファイルサーバー</text>
+    <text x="280" y="41" text-anchor="middle" class="small-text">・社内ファイル共有</text>
+    <text x="280" y="50" text-anchor="middle" class="small-text">・バックアップ</text>
+    <text x="280" y="59" text-anchor="middle" class="small-text">・アクセス制御</text>
+
+    <!-- 映像サーバー -->
+    <rect x="380" y="10" width="140" height="70" class="datacenter-system" rx="5"/>
+    <text x="450" y="28" text-anchor="middle" class="datacenter-text" font-size="10px">映像サーバー</text>
+    <text x="450" y="41" text-anchor="middle" class="small-text">・動画コンテンツ</text>
+    <text x="450" y="50" text-anchor="middle" class="small-text">・研修資料</text>
+  </g>
+
+  <!-- 検査システム -->
+  <g transform="translate(100, 400)">
+    <text x="0" y="0" class="area-label">■検査システム</text>
+
+    <!-- 環境分析システム -->
+    <rect x="0" y="10" width="170" height="70" class="datacenter-system" rx="5"/>
+    <text x="85" y="25" text-anchor="middle" class="datacenter-text" font-size="10px">環境分析システム</text>
+    <text x="85" y="38" text-anchor="middle" class="small-text">・LCS</text>
+    <text x="85" y="47" text-anchor="middle" class="small-text">・分析データ管理</text>
+    <text x="85" y="56" text-anchor="middle" class="small-text">・検査結果管理</text>
+
+    <!-- 微生物検査システム -->
+    <rect x="190" y="10" width="170" height="70" class="datacenter-system" rx="5"/>
+    <text x="275" y="25" text-anchor="middle" class="datacenter-text" font-size="10px">微生物検査システム</text>
+    <text x="275" y="38" text-anchor="middle" class="small-text">・微生物検査</text>
+    <text x="275" y="47" text-anchor="middle" class="small-text">・培養管理</text>
+    <text x="275" y="56" text-anchor="middle" class="small-text">・検査レポート</text>
+
+    <!-- 異物検査システム -->
+    <rect x="380" y="10" width="170" height="70" class="datacenter-system" rx="5"/>
+    <text x="465" y="25" text-anchor="middle" class="datacenter-text" font-size="10px">異物検査システム</text>
+    <text x="465" y="38" text-anchor="middle" class="small-text">・Pcan</text>
+    <text x="465" y="47" text-anchor="middle" class="small-text">・AI同定</text>
+    <text x="465" y="56" text-anchor="middle" class="small-text">管理: 異物分析部</text>
+  </g>
+
+  <!-- セキュリティ基盤 -->
+  <g transform="translate(100, 500)">
+    <text x="0" y="0" class="area-label">■セキュリティ基盤</text>
+
+    <!-- PKI認証 -->
+    <rect x="0" y="10" width="140" height="65" class="security-system" rx="5"/>
+    <text x="70" y="26" text-anchor="middle" class="security-text" font-size="9px">PKI認証</text>
+    <text x="70" y="38" text-anchor="middle" class="small-text">・デバイス証明書</text>
+    <text x="70" y="47" text-anchor="middle" class="small-text">・端末認証</text>
+    <text x="70" y="56" text-anchor="middle" class="small-text">・ログイン管理</text>
+
+    <!-- ウィルス対策 -->
+    <rect x="160" y="10" width="140" height="65" class="security-system" rx="5"/>
+    <text x="230" y="26" text-anchor="middle" class="security-text" font-size="9px">ウィルス対策</text>
+    <text x="230" y="38" text-anchor="middle" class="small-text">・Windows Defender</text>
+    <text x="230" y="47" text-anchor="middle" class="small-text">・リアルタイム保護</text>
+
+    <!-- MDM -->
+    <rect x="320" y="10" width="120" height="65" class="security-system" rx="5"/>
+    <text x="380" y="26" text-anchor="middle" class="security-text" font-size="9px">MDM</text>
+    <text x="380" y="38" text-anchor="middle" class="small-text">・端末管理</text>
+    <text x="380" y="47" text-anchor="middle" class="small-text">・不許可端末制御</text>
+
+    <!-- WAF -->
+    <rect x="460" y="10" width="120" height="65" class="security-system" rx="5"/>
+    <text x="520" y="26" text-anchor="middle" class="security-text" font-size="9px">WAF</text>
+    <text x="520" y="38" text-anchor="middle" class="small-text">・SiteGuard Lite</text>
+    <text x="520" y="47" text-anchor="middle" class="small-text">・Web攻撃防御</text>
+  </g>
+
+  <!-- ネットワーク機器 -->
+  <g transform="translate(100, 600)">
+    <text x="0" y="0" class="area-label">■ネットワーク</text>
+
+    <!-- BIG-IP -->
+    <rect x="0" y="10" width="140" height="55" class="security-system" rx="5"/>
+    <text x="70" y="26" text-anchor="middle" class="security-text" font-size="9px">BIG-IP</text>
+    <text x="70" y="38" text-anchor="middle" class="small-text">・ロードバランサ</text>
+    <text x="70" y="47" text-anchor="middle" class="small-text">・認証基盤</text>
+
+    <!-- FortiGate -->
+    <rect x="160" y="10" width="140" height="55" class="security-system" rx="5"/>
+    <text x="230" y="26" text-anchor="middle" class="security-text" font-size="9px">FortiGate</text>
+    <text x="230" y="38" text-anchor="middle" class="small-text">・ファイアウォール</text>
+    <text x="230" y="47" text-anchor="middle" class="small-text">・SD-WAN</text>
+
+    <!-- 無線LANサーバー -->
+    <rect x="320" y="10" width="140" height="55" class="security-system" rx="5"/>
+    <text x="390" y="26" text-anchor="middle" class="security-text" font-size="9px">無線LANサーバー</text>
+    <text x="390" y="38" text-anchor="middle" class="small-text">・RADIUS認証</text>
+
+    <!-- DNS -->
+    <rect x="480" y="10" width="100" height="55" class="datacenter-system" rx="5"/>
+    <text x="530" y="26" text-anchor="middle" class="datacenter-text" font-size="9px">DNSサーバー</text>
+    <text x="530" y="38" text-anchor="middle" class="small-text">・AWS用DNS</text>
+  </g>
+
+  <!-- バックアップ・監視 -->
+  <g transform="translate(100, 690)">
+    <text x="0" y="0" class="area-label">■バックアップ・監視</text>
+
+    <!-- オフラインバックアップ -->
+    <rect x="0" y="10" width="180" height="55" class="datacenter-system" rx="5"/>
+    <text x="90" y="26" text-anchor="middle" class="datacenter-text" font-size="9px">オフラインバックアップ</text>
+    <text x="90" y="38" text-anchor="middle" class="small-text">・USBバックアップ</text>
+    <text x="90" y="47" text-anchor="middle" class="small-text">・災害対策</text>
+
+    <!-- uSonar -->
+    <rect x="200" y="10" width="140" height="55" class="datacenter-system" rx="5"/>
+    <text x="270" y="26" text-anchor="middle" class="datacenter-text" font-size="9px">uSonar</text>
+    <text x="270" y="38" text-anchor="middle" class="small-text">・資産管理</text>
+    <text x="270" y="47" text-anchor="middle" class="small-text">・遠隔サポート</text>
+
+    <!-- Actionista -->
+    <rect x="360" y="10" width="140" height="55" class="datacenter-system" rx="5"/>
+    <text x="430" y="26" text-anchor="middle" class="datacenter-text" font-size="9px">Actionista</text>
+    <text x="430" y="38" text-anchor="middle" class="small-text">・スマホ挙動監視</text>
+  </g>
+
+  <!-- データ連携ツール -->
+  <g transform="translate(100, 780)">
+    <text x="0" y="0" class="area-label">■データ連携</text>
+
+    <!-- DataSpider -->
+    <rect x="0" y="10" width="140" height="55" class="datacenter-system" rx="5"/>
+    <text x="70" y="26" text-anchor="middle" class="datacenter-text" font-size="9px">DataSpider</text>
+    <text x="70" y="38" text-anchor="middle" class="small-text">・データ連携基盤</text>
+    <text x="70" y="47" text-anchor="middle" class="small-text">・ETL処理</text>
+
+    <!-- WebFocus -->
+    <rect x="160" y="10" width="130" height="55" class="datacenter-system" rx="5"/>
+    <text x="225" y="26" text-anchor="middle" class="datacenter-text" font-size="9px">WebFocus</text>
+    <text x="225" y="38" text-anchor="middle" class="small-text">・BIツール</text>
+    <text x="225" y="47" text-anchor="middle" class="small-text">・レポート作成</text>
+
+    <!-- RepotonUPro -->
+    <rect x="310" y="10" width="140" height="55" class="datacenter-system" rx="5"/>
+    <text x="380" y="26" text-anchor="middle" class="datacenter-text" font-size="9px">RepotonUPro</text>
+    <text x="380" y="38" text-anchor="middle" class="small-text">・過去データ保存</text>
+  </g>
+
+  <!-- その他システム -->
+  <g transform="translate(100, 870)">
+    <text x="0" y="0" class="area-label">■その他</text>
+
+    <!-- CXシステム -->
+    <rect x="0" y="10" width="130" height="55" class="datacenter-system" rx="5"/>
+    <text x="65" y="26" text-anchor="middle" class="datacenter-text" font-size="9px">CXシステム</text>
+    <text x="65" y="38" text-anchor="middle" class="small-text">・商品管理</text>
+    <text x="65" y="47" text-anchor="middle" class="small-text">管理: 商品開発G</text>
+
+    <!-- E-センター -->
+    <rect x="150" y="10" width="120" height="55" class="datacenter-system" rx="5"/>
+    <text x="210" y="26" text-anchor="middle" class="datacenter-text" font-size="9px">E-センター</text>
+    <text x="210" y="38" text-anchor="middle" class="small-text">・E-ラーニング</text>
+
+    <!-- ホームページ -->
+    <rect x="290" y="10" width="120" height="55" class="datacenter-system" rx="5"/>
+    <text x="350" y="26" text-anchor="middle" class="datacenter-text" font-size="9px">ホームページ</text>
+    <text x="350" y="38" text-anchor="middle" class="small-text">・本社HP</text>
+
+    <!-- メルマガ配信 -->
+    <rect x="430" y="10" width="120" height="55" class="datacenter-system" rx="5"/>
+    <text x="490" y="26" text-anchor="middle" class="datacenter-text" font-size="9px">メルマガ配信</text>
+    <text x="490" y="38" text-anchor="middle" class="small-text">・顧客向け配信</text>
+  </g>
+
+  <!-- 接続線：データセンター → クラウド -->
+  <line x1="850" y1="400" x2="920" y2="400" class="cloud-connection"/>
+  <text x="885" y="395" class="tiny-text">インターネット</text>
+
+  <!-- ========== クラウドサービス領域 ========== -->
+  <rect x="920" y="130" width="1050" height="1200" class="network-area" rx="10"/>
+  <text x="1450" y="155" text-anchor="middle" class="section-title">【クラウドサービス】</text>
+
+  <!-- Office 365 -->
+  <g transform="translate(950, 180)">
+    <text x="0" y="0" class="area-label">■Microsoft Office 365</text>
+
+    <rect x="0" y="10" width="450" height="90" class="cloud-system" rx="5"/>
+    <text x="225" y="28" text-anchor="middle" class="cloud-text" font-size="12px">Office 365 / Microsoft 365</text>
+
+    <!-- 各サービス -->
+    <rect x="10" y="40" width="80" height="30" class="saas-system" rx="3"/>
+    <text x="50" y="58" text-anchor="middle" class="saas-text">Exchange</text>
+    <text x="50" y="67" text-anchor="middle" class="tiny-text">(メール)</text>
+
+    <rect x="100" y="40" width="70" height="30" class="saas-system" rx="3"/>
+    <text x="135" y="58" text-anchor="middle" class="saas-text">Teams</text>
+
+    <rect x="180" y="40" width="70" height="30" class="saas-system" rx="3"/>
+    <text x="215" y="58" text-anchor="middle" class="saas-text">OneDrive</text>
+
+    <rect x="260" y="40" width="70" height="30" class="saas-system" rx="3"/>
+    <text x="295" y="58" text-anchor="middle" class="saas-text">OneNote</text>
+
+    <rect x="340" y="40" width="100" height="30" class="saas-system" rx="3"/>
+    <text x="390" y="58" text-anchor="middle" class="saas-text">Microsoft Copilot</text>
+  </g>
+
+  <!-- Kintone -->
+  <g transform="translate(950, 300)">
+    <text x="0" y="0" class="area-label">■Kintone</text>
+
+    <rect x="0" y="10" width="450" height="90" class="cloud-system" rx="5"/>
+    <text x="225" y="28" text-anchor="middle" class="cloud-text" font-size="12px">Kintone（業務アプリ基盤）</text>
+
+    <rect x="10" y="40" width="70" height="30" class="saas-system" rx="3"/>
+    <text x="45" y="58" text-anchor="middle" class="saas-text">工程管理</text>
+
+    <rect x="90" y="40" width="60" height="30" class="saas-system" rx="3"/>
+    <text x="120" y="58" text-anchor="middle" class="saas-text">受発注</text>
+
+    <rect x="160" y="40" width="70" height="30" class="saas-system" rx="3"/>
+    <text x="195" y="58" text-anchor="middle" class="saas-text">WEB請求</text>
+
+    <rect x="240" y="40" width="60" height="30" class="saas-system" rx="3"/>
+    <text x="270" y="58" text-anchor="middle" class="saas-text">dbSheet</text>
+
+    <rect x="310" y="40" width="130" height="30" class="saas-system" rx="3"/>
+    <text x="375" y="58" text-anchor="middle" class="saas-text">トラップ受発注</text>
+  </g>
+
+  <!-- AWS -->
+  <g transform="translate(950, 420)">
+    <text x="0" y="0" class="area-label">■AWS（Amazon Web Services）</text>
+
+    <rect x="0" y="10" width="450" height="70" class="cloud-system" rx="5"/>
+    <text x="225" y="28" text-anchor="middle" class="cloud-text" font-size="12px">AWS クラウド基盤</text>
+
+    <rect x="10" y="40" width="90" height="30" class="saas-system" rx="3"/>
+    <text x="55" y="58" text-anchor="middle" class="saas-text">DataSpider</text>
+
+    <rect x="110" y="40" width="80" height="30" class="saas-system" rx="3"/>
+    <text x="150" y="58" text-anchor="middle" class="saas-text">開発環境</text>
+
+    <rect x="200" y="40" width="80" height="30" class="saas-system" rx="3"/>
+    <text x="240" y="58" text-anchor="middle" class="saas-text">DNSサーバー</text>
+
+    <rect x="290" y="40" width="150" height="30" class="saas-system" rx="3"/>
+    <text x="365" y="58" text-anchor="middle" class="saas-text">ホスト型WAF(開発)</text>
+  </g>
+
+  <!-- Box -->
+  <g transform="translate(950, 520)">
+    <text x="0" y="0" class="area-label">■Box（クラウドストレージ）</text>
+
+    <rect x="0" y="10" width="450" height="60" class="cloud-system" rx="5"/>
+    <text x="225" y="35" text-anchor="middle" class="cloud-text" font-size="11px">Box - ファイル共有・顧客とのファイル共有</text>
+    <text x="225" y="50" text-anchor="middle" class="small-text">・規程管理 ・文書の版管理 ・アーカイブ</text>
+  </g>
+
+  <!-- メールセキュリティ -->
+  <g transform="translate(950, 610)">
+    <text x="0" y="0" class="area-label">■メール・セキュリティ</text>
+
+    <rect x="0" y="10" width="130" height="50" class="saas-system" rx="3"/>
+    <text x="65" y="28" text-anchor="middle" class="saas-text" font-size="9px">メール対策</text>
+    <text x="65" y="40" text-anchor="middle" class="tiny-text">・誤送信防止</text>
+    <text x="65" y="48" text-anchor="middle" class="tiny-text">・アーカイブ</text>
+
+    <rect x="140" y="10" width="130" height="50" class="saas-system" rx="3"/>
+    <text x="205" y="28" text-anchor="middle" class="saas-text" font-size="9px">メール訓練</text>
+    <text x="205" y="40" text-anchor="middle" class="tiny-text">・標的型攻撃訓練</text>
+
+    <rect x="280" y="10" width="120" height="50" class="saas-system" rx="3"/>
+    <text x="340" y="28" text-anchor="middle" class="saas-text" font-size="9px">脅威診断</text>
+    <text x="340" y="40" text-anchor="middle" class="tiny-text">・セキュリティ診断</text>
+  </g>
+
+  <!-- 業務SaaS（人事・総務） -->
+  <g transform="translate(950, 690)">
+    <text x="0" y="0" class="area-label">■業務SaaS（人事・総務）</text>
+
+    <rect x="0" y="10" width="100" height="45" class="saas-system" rx="3"/>
+    <text x="50" y="26" text-anchor="middle" class="saas-text" font-size="8px">SmartHR</text>
+    <text x="50" y="36" text-anchor="middle" class="tiny-text">・人事労務</text>
+
+    <rect x="110" y="10" width="100" height="45" class="saas-system" rx="3"/>
+    <text x="160" y="26" text-anchor="middle" class="saas-text" font-size="8px">TimeProVG</text>
+    <text x="160" y="36" text-anchor="middle" class="tiny-text">・勤怠管理</text>
+
+    <rect x="220" y="10" width="110" height="45" class="saas-system" rx="3"/>
+    <text x="275" y="26" text-anchor="middle" class="saas-text" font-size="8px">sonarATS</text>
+    <text x="275" y="36" text-anchor="middle" class="tiny-text">・年調管理(人事)</text>
+
+    <rect x="340" y="10" width="110" height="45" class="saas-system" rx="3"/>
+    <text x="395" y="26" text-anchor="middle" class="saas-text" font-size="8px">インタビューメーカー</text>
+    <text x="395" y="36" text-anchor="middle" class="tiny-text">・採用面接</text>
+  </g>
+
+  <!-- 業務SaaS（営業・マーケ） -->
+  <g transform="translate(950, 765)">
+    <text x="0" y="0" class="area-label">■業務SaaS（営業・マーケ）</text>
+
+    <rect x="0" y="10" width="100" height="45" class="saas-system" rx="3"/>
+    <text x="50" y="26" text-anchor="middle" class="saas-text" font-size="8px">名刺解析AI</text>
+    <text x="50" y="36" text-anchor="middle" class="tiny-text">・名刺管理</text>
+
+    <rect x="110" y="10" width="100" height="45" class="saas-system" rx="3"/>
+    <text x="160" y="26" text-anchor="middle" class="saas-text" font-size="8px">Zoom</text>
+    <text x="160" y="36" text-anchor="middle" class="tiny-text">・WEB会議</text>
+
+    <rect x="220" y="10" width="100" height="45" class="saas-system" rx="3"/>
+    <text x="270" y="26" text-anchor="middle" class="saas-text" font-size="8px">シャリーン</text>
+    <text x="270" y="36" text-anchor="middle" class="tiny-text">・セミナー管理</text>
+
+    <rect x="330" y="10" width="120" height="45" class="saas-system" rx="3"/>
+    <text x="390" y="26" text-anchor="middle" class="saas-text" font-size="8px">イカリスマートキャンパス</text>
+    <text x="390" y="36" text-anchor="middle" class="tiny-text">・顧客教育</text>
+  </g>
+
+  <!-- 業務SaaS（業務効率化） -->
+  <g transform="translate(950, 840)">
+    <text x="0" y="0" class="area-label">■業務SaaS（業務効率化）</text>
+
+    <rect x="0" y="10" width="100" height="45" class="saas-system" rx="3"/>
+    <text x="50" y="26" text-anchor="middle" class="saas-text" font-size="8px">ChatGPT</text>
+    <text x="50" y="36" text-anchor="middle" class="tiny-text">・AI文章生成</text>
+
+    <rect x="110" y="10" width="100" height="45" class="saas-system" rx="3"/>
+    <text x="160" y="26" text-anchor="middle" class="saas-text" font-size="8px">文賢</text>
+    <text x="160" y="36" text-anchor="middle" class="tiny-text">・文章校正(広報)</text>
+
+    <rect x="220" y="10" width="100" height="45" class="saas-system" rx="3"/>
+    <text x="270" y="26" text-anchor="middle" class="saas-text" font-size="8px">チャットボット</text>
+    <text x="270" y="36" text-anchor="middle" class="tiny-text">・社内問合せ</text>
+
+    <rect x="330" y="10" width="120" height="45" class="saas-system" rx="3"/>
+    <text x="390" y="26" text-anchor="middle" class="saas-text" font-size="8px">電子契約</text>
+    <text x="390" y="36" text-anchor="middle" class="tiny-text">・契約書電子化</text>
+  </g>
+
+  <!-- 業務SaaS（経理・購買） -->
+  <g transform="translate(950, 915)">
+    <text x="0" y="0" class="area-label">■業務SaaS（経理・購買）</text>
+
+    <rect x="0" y="10" width="100" height="45" class="saas-system" rx="3"/>
+    <text x="50" y="26" text-anchor="middle" class="saas-text" font-size="8px">Amazon Business</text>
+    <text x="50" y="36" text-anchor="middle" class="tiny-text">・文具購入</text>
+
+    <rect x="110" y="10" width="100" height="45" class="saas-system" rx="3"/>
+    <text x="160" y="26" text-anchor="middle" class="saas-text" font-size="8px">E-FAX</text>
+    <text x="160" y="36" text-anchor="middle" class="tiny-text">・FAX電子化</text>
+
+    <rect x="220" y="10" width="100" height="45" class="saas-system" rx="3"/>
+    <text x="270" y="26" text-anchor="middle" class="saas-text" font-size="8px">ビリングサービス</text>
+    <text x="270" y="36" text-anchor="middle" class="tiny-text">・請求管理</text>
+
+    <rect x="330" y="10" width="120" height="45" class="saas-system" rx="3"/>
+    <text x="390" y="26" text-anchor="middle" class="saas-text" font-size="8px">リーガルチェック</text>
+    <text x="390" y="36" text-anchor="middle" class="tiny-text">・契約書審査</text>
+  </g>
+
+  <!-- BI・分析ツール -->
+  <g transform="translate(950, 990)">
+    <text x="0" y="0" class="area-label">■BI・分析ツール</text>
+
+    <rect x="0" y="10" width="100" height="45" class="saas-system" rx="3"/>
+    <text x="50" y="26" text-anchor="middle" class="saas-text" font-size="8px">PowerBI</text>
+    <text x="50" y="36" text-anchor="middle" class="tiny-text">・データ分析</text>
+
+    <rect x="110" y="10" width="100" height="45" class="saas-system" rx="3"/>
+    <text x="160" y="26" text-anchor="middle" class="saas-text" font-size="8px">Smart at tools</text>
+    <text x="160" y="36" text-anchor="middle" class="tiny-text">・検索拡張</text>
+
+    <rect x="220" y="10" width="110" height="45" class="saas-system" rx="3"/>
+    <text x="275" y="26" text-anchor="middle" class="saas-text" font-size="8px">MANA Studio</text>
+    <text x="275" y="36" text-anchor="middle" class="tiny-text">・報告書(開発)</text>
+
+    <rect x="340" y="10" width="110" height="45" class="saas-system" rx="3"/>
+    <text x="395" y="26" text-anchor="middle" class="saas-text" font-size="8px">ClipChamp</text>
+    <text x="395" y="36" text-anchor="middle" class="tiny-text">・動画編集</text>
+  </g>
+
+  <!-- その他SaaS -->
+  <g transform="translate(950, 1065)">
+    <text x="0" y="0" class="area-label">■その他SaaS</text>
+
+    <rect x="0" y="10" width="85" height="45" class="saas-system" rx="3"/>
+    <text x="42" y="26" text-anchor="middle" class="saas-text" font-size="8px">Zaico</text>
+    <text x="42" y="36" text-anchor="middle" class="tiny-text">・在庫管理</text>
+
+    <rect x="95" y="10" width="85" height="45" class="saas-system" rx="3"/>
+    <text x="137" y="26" text-anchor="middle" class="saas-text" font-size="8px">Adobe</text>
+    <text x="137" y="36" text-anchor="middle" class="tiny-text">・PDF編集</text>
+
+    <rect x="190" y="10" width="85" height="45" class="saas-system" rx="3"/>
+    <text x="232" y="26" text-anchor="middle" class="saas-text" font-size="8px">Cookai</text>
+    <text x="232" y="36" text-anchor="middle" class="tiny-text">・カレンダー</text>
+
+    <rect x="285" y="10" width="85" height="45" class="saas-system" rx="3"/>
+    <text x="327" y="26" text-anchor="middle" class="saas-text" font-size="8px">C-Cube</text>
+    <text x="327" y="36" text-anchor="middle" class="tiny-text">・安否確認</text>
+
+    <rect x="380" y="10" width="70" height="45" class="saas-system" rx="3"/>
+    <text x="415" y="26" text-anchor="middle" class="saas-text" font-size="8px">ゲンコネ</text>
+    <text x="415" y="36" text-anchor="middle" class="tiny-text">・工程</text>
+  </g>
+
+  <!-- 外部サービス連携 -->
+  <g transform="translate(950, 1140)">
+    <text x="0" y="0" class="area-label">■外部サービス連携</text>
+
+    <rect x="0" y="10" width="110" height="45" class="saas-system" rx="3"/>
+    <text x="55" y="26" text-anchor="middle" class="saas-text" font-size="8px">レオパレス</text>
+    <text x="55" y="36" text-anchor="middle" class="tiny-text">・社宅管理(総務)</text>
+
+    <rect x="120" y="10" width="110" height="45" class="saas-system" rx="3"/>
+    <text x="175" y="26" text-anchor="middle" class="saas-text" font-size="8px">第一生命</text>
+    <text x="175" y="36" text-anchor="middle" class="tiny-text">・団体生命保険</text>
+
+    <rect x="240" y="10" width="110" height="45" class="saas-system" rx="3"/>
+    <text x="295" y="26" text-anchor="middle" class="saas-text" font-size="8px">イースタッフィング</text>
+    <text x="295" y="36" text-anchor="middle" class="tiny-text">・人材管理</text>
+
+    <rect x="360" y="10" width="90" height="45" class="saas-system" rx="3"/>
+    <text x="405" y="26" text-anchor="middle" class="saas-text" font-size="8px">ユニフィニティー</text>
+    <text x="405" y="36" text-anchor="middle" class="tiny-text">・出張予約</text>
+  </g>
+
+  <!-- Googleサービス -->
+  <g transform="translate(950, 1215)">
+    <text x="0" y="0" class="area-label">■Google サービス</text>
+
+    <rect x="0" y="10" width="140" height="45" class="saas-system" rx="3"/>
+    <text x="70" y="26" text-anchor="middle" class="saas-text" font-size="8px">Google Chrome管理</text>
+    <text x="70" y="36" text-anchor="middle" class="tiny-text">・ブラウザ管理</text>
+
+    <rect x="150" y="10" width="120" height="45" class="saas-system" rx="3"/>
+    <text x="210" y="26" text-anchor="middle" class="saas-text" font-size="8px">IE-受信</text>
+    <text x="210" y="36" text-anchor="middle" class="tiny-text">・メール受信</text>
+  </g>
+
+  <!-- ========== 拠点領域 ========== -->
+  <rect x="50" y="1380" width="1920" height="400" class="network-area" rx="10"/>
+  <text x="1010" y="1405" text-anchor="middle" class="section-title">【各拠点・営業所】</text>
+
+  <!-- 拠点一覧 -->
+  <g transform="translate(100, 1440)">
+    <text x="0" y="0" class="area-label">■主要拠点</text>
+
+    <rect x="0" y="15" width="140" height="60" class="site-box" rx="5"/>
+    <text x="70" y="35" text-anchor="middle" class="site-text" font-size="10px">本社</text>
+    <text x="70" y="48" text-anchor="middle" class="small-text">・総合管理</text>
+    <text x="70" y="58" text-anchor="middle" class="small-text">・経営企画室</text>
+
+    <rect x="160" y="15" width="140" height="60" class="site-box" rx="5"/>
+    <text x="230" y="35" text-anchor="middle" class="site-text" font-size="10px">日本橋オフィス</text>
+    <text x="230" y="48" text-anchor="middle" class="small-text">・営業拠点</text>
+
+    <rect x="320" y="15" width="140" height="60" class="site-box" rx="5"/>
+    <text x="390" y="35" text-anchor="middle" class="site-text" font-size="10px">大阪オフィス</text>
+    <text x="390" y="48" text-anchor="middle" class="small-text">・西日本統括</text>
+
+    <rect x="480" y="15" width="140" height="60" class="site-box" rx="5"/>
+    <text x="550" y="35" text-anchor="middle" class="site-text" font-size="10px">富岡オフィス</text>
+    <text x="550" y="48" text-anchor="middle" class="small-text">・研究開発</text>
+
+    <rect x="640" y="15" width="140" height="60" class="site-box" rx="5"/>
+    <text x="710" y="35" text-anchor="middle" class="site-text" font-size="10px">三重（検査分析）</text>
+    <text x="710" y="48" text-anchor="middle" class="small-text">・検査センター</text>
+  </g>
+
+  <g transform="translate(100, 1540)">
+    <text x="0" y="0" class="area-label">■地域営業所</text>
+
+    <!-- 北海道・東北 -->
+    <rect x="0" y="15" width="100" height="50" class="site-box" rx="4"/>
+    <text x="50" y="33" text-anchor="middle" class="site-text" font-size="9px">北海道</text>
+    <text x="50" y="45" text-anchor="middle" class="small-text">営業所</text>
+
+    <rect x="110" y="15" width="100" height="50" class="site-box" rx="4"/>
+    <text x="160" y="33" text-anchor="middle" class="site-text" font-size="9px">東北</text>
+    <text x="160" y="45" text-anchor="middle" class="small-text">営業所</text>
+
+    <!-- 関東 -->
+    <rect x="220" y="15" width="100" height="50" class="site-box" rx="4"/>
+    <text x="270" y="33" text-anchor="middle" class="site-text" font-size="9px">関東</text>
+    <text x="270" y="45" text-anchor="middle" class="small-text">営業所</text>
+
+    <rect x="330" y="15" width="100" height="50" class="site-box" rx="4"/>
+    <text x="380" y="33" text-anchor="middle" class="site-text" font-size="9px">関越</text>
+    <text x="380" y="45" text-anchor="middle" class="small-text">営業所</text>
+
+    <rect x="440" y="15" width="100" height="50" class="site-box" rx="4"/>
+    <text x="490" y="33" text-anchor="middle" class="site-text" font-size="9px">東京</text>
+    <text x="490" y="45" text-anchor="middle" class="small-text">営業所</text>
+
+    <!-- 中部 -->
+    <rect x="550" y="15" width="100" height="50" class="site-box" rx="4"/>
+    <text x="600" y="33" text-anchor="middle" class="site-text" font-size="9px">東海</text>
+    <text x="600" y="45" text-anchor="middle" class="small-text">営業所</text>
+
+    <!-- 関西・中四国 -->
+    <rect x="660" y="15" width="100" height="50" class="site-box" rx="4"/>
+    <text x="710" y="33" text-anchor="middle" class="site-text" font-size="9px">関西</text>
+    <text x="710" y="45" text-anchor="middle" class="small-text">営業所</text>
+
+    <rect x="770" y="15" width="100" height="50" class="site-box" rx="4"/>
+    <text x="820" y="33" text-anchor="middle" class="site-text" font-size="9px">中四国</text>
+    <text x="820" y="45" text-anchor="middle" class="small-text">営業所</text>
+
+    <!-- 九州 -->
+    <rect x="880" y="15" width="100" height="50" class="site-box" rx="4"/>
+    <text x="930" y="33" text-anchor="middle" class="site-text" font-size="9px">九州</text>
+    <text x="930" y="45" text-anchor="middle" class="small-text">営業所</text>
+  </g>
+
+  <!-- 拠点で利用するシステム -->
+  <g transform="translate(100, 1630)">
+    <text x="0" y="0" class="area-label">■拠点共通システム</text>
+
+    <rect x="0" y="15" width="180" height="50" class="saas-system" rx="4"/>
+    <text x="90" y="33" text-anchor="middle" class="saas-text" font-size="9px">総合経営管理システム</text>
+    <text x="90" y="45" text-anchor="middle" class="tiny-text">（リモートアクセス）</text>
+
+    <rect x="190" y="15" width="140" height="50" class="saas-system" rx="4"/>
+    <text x="260" y="33" text-anchor="middle" class="saas-text" font-size="9px">Office 365</text>
+    <text x="260" y="45" text-anchor="middle" class="tiny-text">（メール・Teams）</text>
+
+    <rect x="340" y="15" width="120" height="50" class="saas-system" rx="4"/>
+    <text x="400" y="33" text-anchor="middle" class="saas-text" font-size="9px">Kintone</text>
+    <text x="400" y="45" text-anchor="middle" class="tiny-text">（業務アプリ）</text>
+
+    <rect x="470" y="15" width="120" height="50" class="saas-system" rx="4"/>
+    <text x="530" y="33" text-anchor="middle" class="saas-text" font-size="9px">Box</text>
+    <text x="530" y="45" text-anchor="middle" class="tiny-text">（ファイル共有）</text>
+
+    <rect x="600" y="15" width="140" height="50" class="saas-system" rx="4"/>
+    <text x="670" y="33" text-anchor="middle" class="saas-text" font-size="9px">Zoom</text>
+    <text x="670" y="45" text-anchor="middle" class="tiny-text">（WEB会議）</text>
+  </g>
+
+  <!-- ネットワーク構成補足 -->
+  <g transform="translate(100, 1720)">
+    <text x="0" y="0" class="area-label">■ネットワーク接続</text>
+
+    <rect x="0" y="15" width="200" height="50" class="security-system" rx="4"/>
+    <text x="100" y="33" text-anchor="middle" class="security-text" font-size="9px">インターネット回線</text>
+    <text x="100" y="45" text-anchor="middle" class="small-text">・DOCOMO網経由</text>
+
+    <rect x="210" y="15" width="200" height="50" class="security-system" rx="4"/>
+    <text x="310" y="33" text-anchor="middle" class="security-text" font-size="9px">閉域網（SD-WAN）</text>
+    <text x="310" y="45" text-anchor="middle" class="small-text">・FortiGate</text>
+
+    <rect x="420" y="15" width="200" height="50" class="security-system" rx="4"/>
+    <text x="520" y="33" text-anchor="middle" class="security-text" font-size="9px">無線LAN（RADIUS認証）</text>
+    <text x="520" y="45" text-anchor="middle" class="small-text">・拠点内Wi-Fi</text>
+  </g>
+
+  <!-- 接続線：クラウド → 拠点 -->
+  <line x1="1450" y1="1330" x2="1010" y2="1380" class="cloud-connection"/>
+  <text x="1230" y="1355" class="tiny-text">インターネット経由でアクセス</text>
+
+  <!-- 接続線：データセンター → 拠点 -->
+  <line x1="450" y1="1030" x2="620" y2="1380" class="connection"/>
+  <text x="535" y="1205" class="tiny-text">閉域網</text>
+
+  <!-- ========== 注記・補足情報 ========== -->
+  <g transform="translate(50, 1820)">
+    <text x="0" y="0" class="section-title">【システム構成の特徴】</text>
+
+    <text x="0" y="30" class="area-label">■ハイブリッド構成</text>
+    <text x="0" y="50" class="tiny-text">・データセンター（オンプレミス）+ クラウドサービス（Office 365, AWS, Kintone等）の組み合わせ</text>
+    <text x="0" y="65" class="tiny-text">・基幹システム（総合経営管理、人事給与）はデータセンターで管理、業務アプリはクラウド化を推進</text>
+
+    <text x="0" y="95" class="area-label">■セキュリティ多層防御</text>
+    <text x="0" y="115" class="tiny-text">・PKI認証、MDM、WAF、ウィルス対策を組み合わせた多層セキュリティ</text>
+    <text x="0" y="130" class="tiny-text">・メール訓練、脅威診断サービスによる継続的なセキュリティ向上</text>
+
+    <text x="0" y="160" class="area-label">■SaaS活用による業務効率化</text>
+    <text x="0" y="180" class="tiny-text">・50以上のSaaSツールを部門別に導入（人事: SmartHR、営業: Zoom、経理: Amazon Business等）</text>
+    <text x="0" y="195" class="tiny-text">・Kintoneを共通基盤として工程管理、受発注、請求業務をノーコード開発</text>
+
+    <text x="0" y="225" class="area-label">■データ連携基盤</text>
+    <text x="0" y="245" class="tiny-text">・DataSpider、WebFocusによるシステム間データ連携とBI分析</text>
+    <text x="0" y="260" class="tiny-text">・PowerBI、Smart at toolsで経営ダッシュボード構築</text>
+
+    <text x="0" y="290" class="area-label">■拠点間接続</text>
+    <text x="0" y="310" class="tiny-text">・全国の営業所・オフィスはインターネット（DOCOMO網）と閉域網（SD-WAN/FortiGate）で接続</text>
+    <text x="0" y="325" class="tiny-text">・クラウドサービスへは各拠点から直接アクセス、セキュリティはMDM・認証で担保</text>
+
+    <text x="0" y="355" class="area-label">■DX推進の方向性</text>
+    <text x="0" y="375" class="tiny-text">・検査システムのAI活用（AI同定）、文書電子化（電子契約、E-FAX）、AI業務支援（ChatGPT、文賢）</text>
+    <text x="0" y="390" class="tiny-text">・営業DX: 名刺AI解析、WEB会議（Zoom）、スマートキャンパス（顧客教育プラットフォーム）</text>
+    <text x="0" y="405" class="tiny-text">・バックオフィスDX: SmartHR、TimeProVG、リーガルチェック自動化、ビリングサービス</text>
+  </g>
+
+  <!-- フッター -->
+  <g transform="translate(50, 2280)">
+    <line x1="0" y1="0" x2="2300" y2="0" stroke="#ccc" stroke-width="1"/>
+    <text x="0" y="20" class="tiny-text">作成日: 2025年11月17日 | 出典: ㊙情報システム導入ツール 2025_09_01時点.pptx | 配色: PowerPoint推奨パターン（青系モノトーン + オレンジアクセント）</text>
+    <text x="0" y="35" class="tiny-text">管理: 株式会社ミオシステム | イカリ消毒株式会社 DXコンサルティングプロジェクト</text>
+  </g>
+
+</svg>

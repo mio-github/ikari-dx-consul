@@ -6,24 +6,44 @@
      preserveAspectRatio="xMidYMid meet">
   <defs>
     <style>
+      /* テキストスタイル */
       .title { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 28px; font-weight: bold; fill: #1a1a1a; }
       .subtitle { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 16px; fill: #666; }
-      .exec-box { fill: #2c3e50; stroke: #1a252f; stroke-width: 2; }
+
+      /* 推奨配色パターン：青系モノトーン（信頼感・プロフェッショナル） */
+      /* 濃青 #1A43AA / 明青 #15A2E9 / グレー #E0E6E4 / アクセント（オレンジ）#F47F29 */
+
+      /* 経営層：濃青（最上位階層） */
+      .exec-box { fill: #1A43AA; stroke: #0d2459; stroke-width: 2; }
       .exec-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 14px; font-weight: bold; fill: white; }
-      .dept-box { fill: #3498db; stroke: #2980b9; stroke-width: 2; }
+
+      /* 主要部門：明青（中位階層） */
+      .dept-box { fill: #15A2E9; stroke: #0d7ab8; stroke-width: 2; }
       .dept-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 13px; font-weight: bold; fill: white; }
-      .subdept-box { fill: #5dade2; stroke: #3498db; stroke-width: 1.5; }
+
+      /* サブ部門：明青の薄め（下位階層） */
+      .subdept-box { fill: #5ec4f5; stroke: #15A2E9; stroke-width: 1.5; }
       .subdept-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 11px; fill: white; }
-      .group-box { fill: #85c1e9; stroke: #5dade2; stroke-width: 1; }
+
+      /* グループ：最も薄い青（最下位階層） */
+      .group-box { fill: #a8dff8; stroke: #5ec4f5; stroke-width: 1; }
       .group-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 10px; fill: #1a1a1a; }
-      .support-box { fill: #95a5a6; stroke: #7f8c8d; stroke-width: 2; }
+
+      /* 管理・支援部門：グレー系（サポート機能） */
+      .support-box { fill: #708090; stroke: #576370; stroke-width: 2; }
       .support-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 12px; font-weight: bold; fill: white; }
-      .committee-box { fill: #e74c3c; stroke: #c0392b; stroke-width: 2; }
+
+      /* 委員会：オレンジアクセント（強調・注目箇所） */
+      .committee-box { fill: #F47F29; stroke: #c56420; stroke-width: 2; }
       .committee-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 11px; font-weight: bold; fill: white; }
-      .line { stroke: #34495e; stroke-width: 2; fill: none; }
-      .dotted-line { stroke: #7f8c8d; stroke-width: 1.5; fill: none; stroke-dasharray: 5,5; }
-      .label { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 10px; fill: #2c3e50; }
-      .task-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 9px; fill: #1a1a1a; }
+
+      /* 接続線 */
+      .line { stroke: #1A43AA; stroke-width: 2; fill: none; }
+      .dotted-line { stroke: #708090; stroke-width: 1.5; fill: none; stroke-dasharray: 5,5; }
+
+      /* ラベル・説明テキスト */
+      .label { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 10px; fill: #1A43AA; }
+      .task-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 9px; fill: #2c3e50; }
     </style>
   </defs>
 

@@ -1,47 +1,58 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 2400" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
   <defs>
     <style>
+      /* テキストスタイル */
       .title { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 24px; font-weight: bold; fill: #1a1a1a; }
       .subtitle { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 14px; fill: #666; }
-      .section-title { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 18px; font-weight: bold; fill: #2c3e50; }
+      .section-title { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 18px; font-weight: bold; fill: #1A43AA; }
 
-      /* システムボックス */
-      .core-system { fill: #3498db; stroke: #2980b9; stroke-width: 2; }
+      /* 推奨配色パターン：青系モノトーン + ブルーグリーン×オレンジ */
+      /* 濃青 #1A43AA / 明青 #15A2E9 / ブルーグリーン #33BEC5 / オレンジ #F17C1D / グレー #708090 */
+
+      /* 基幹システム：濃青（最重要） */
+      .core-system { fill: #1A43AA; stroke: #0d2459; stroke-width: 2; }
       .core-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 12px; font-weight: bold; fill: white; }
 
-      .sub-system { fill: #5dade2; stroke: #3498db; stroke-width: 1.5; }
+      /* 業務システム：明青（主要機能） */
+      .sub-system { fill: #15A2E9; stroke: #0d7ab8; stroke-width: 1.5; }
       .sub-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 11px; fill: white; }
 
-      .support-system { fill: #85c1e9; stroke: #5dade2; stroke-width: 1; }
+      /* 補助システム：薄い青（サポート機能） */
+      .support-system { fill: #a8dff8; stroke: #5ec4f5; stroke-width: 1; }
       .support-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 10px; fill: #1a1a1a; }
 
-      .external-system { fill: #95a5a6; stroke: #7f8c8d; stroke-width: 2; }
+      /* 外部システム：グレー（外部要素） */
+      .external-system { fill: #708090; stroke: #576370; stroke-width: 2; }
       .external-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 11px; fill: white; }
 
-      .inspection-system { fill: #e67e22; stroke: #d35400; stroke-width: 1.5; }
+      /* 検査システム：ブルーグリーン（特定業務） */
+      .inspection-system { fill: #33BEC5; stroke: #268b91; stroke-width: 1.5; }
       .inspection-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 10px; fill: white; }
 
-      .kintone-system { fill: #9b59b6; stroke: #8e44ad; stroke-width: 2; }
+      /* Kintone基盤：明青（共通基盤） */
+      .kintone-system { fill: #15A2E9; stroke: #0d7ab8; stroke-width: 2; }
       .kintone-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 11px; font-weight: bold; fill: white; }
 
-      .non-system { fill: #e74c3c; stroke: #c0392b; stroke-width: 1.5; }
+      /* 非システム領域：オレンジアクセント（課題・注意箇所） */
+      .non-system { fill: #F17C1D; stroke: #c06217; stroke-width: 1.5; }
       .non-system-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 9px; fill: white; }
 
       /* 接続線 */
-      .data-flow { stroke: #34495e; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
-      .manual-flow { stroke: #e74c3c; stroke-width: 2; fill: none; stroke-dasharray: 5,5; marker-end: url(#arrowhead-red); }
-      .info-flow { stroke: #9b59b6; stroke-width: 1.5; fill: none; stroke-dasharray: 3,3; }
+      .data-flow { stroke: #1A43AA; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .manual-flow { stroke: #F17C1D; stroke-width: 2; fill: none; stroke-dasharray: 5,5; marker-end: url(#arrowhead-orange); }
+      .info-flow { stroke: #33BEC5; stroke-width: 1.5; fill: none; stroke-dasharray: 3,3; }
 
-      .label { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 9px; fill: #2c3e50; }
-      .function-label { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 8px; fill: #555; }
+      /* ラベル */
+      .label { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 9px; fill: #1A43AA; }
+      .function-label { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 8px; fill: #f0f0f0; }
     </style>
 
     <!-- 矢印マーカー -->
     <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#34495e" />
+      <polygon points="0 0, 10 3, 0 6" fill="#1A43AA" />
     </marker>
-    <marker id="arrowhead-red" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#e74c3c" />
+    <marker id="arrowhead-orange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#F17C1D" />
     </marker>
   </defs>
 

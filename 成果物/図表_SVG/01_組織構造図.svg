@@ -6,17 +6,37 @@
      preserveAspectRatio="xMidYMid meet">
   <defs>
     <style>
-      .title { font-family: 'Yu Gothic', sans-serif; font-size: 24px; font-weight: bold; fill: #2c3e50; }
-      .subtitle { font-family: 'Yu Gothic', sans-serif; font-size: 14px; fill: #7f8c8d; }
-      .dept-box { fill: #3498db; stroke: #2980b9; stroke-width: 2; }
-      .exec-box { fill: #e74c3c; stroke: #c0392b; stroke-width: 2; }
-      .mgmt-box { fill: #27ae60; stroke: #229954; stroke-width: 2; }
-      .sales-box { fill: #f39c12; stroke: #d68910; stroke-width: 2; }
-      .tech-box { fill: #9b59b6; stroke: #8e44ad; stroke-width: 2; }
-      .info-box { fill: #1abc9c; stroke: #16a085; stroke-width: 2; }
+      /* テキストスタイル */
+      .title { font-family: 'Yu Gothic', sans-serif; font-size: 24px; font-weight: bold; fill: #1a1a1a; }
+      .subtitle { font-family: 'Yu Gothic', sans-serif; font-size: 14px; fill: #666; }
+
+      /* 推奨配色パターン：青系モノトーン + オレンジアクセント */
+      /* 濃青 #1A43AA / 明青 #15A2E9 / ブルーグリーン #33BEC5 / オレンジ #F47F29 / グレー #708090 */
+
+      /* 一般部門：明青 */
+      .dept-box { fill: #15A2E9; stroke: #0d7ab8; stroke-width: 2; }
+
+      /* 役員・経営層：濃青 */
+      .exec-box { fill: #1A43AA; stroke: #0d2459; stroke-width: 2; }
+
+      /* 管理部門：グレー */
+      .mgmt-box { fill: #708090; stroke: #576370; stroke-width: 2; }
+
+      /* 営業部門：明青（主要機能） */
+      .sales-box { fill: #15A2E9; stroke: #0d7ab8; stroke-width: 2; }
+
+      /* 技術部門：ブルーグリーン */
+      .tech-box { fill: #33BEC5; stroke: #268b91; stroke-width: 2; }
+
+      /* 情報システム・DX：オレンジアクセント（重点領域） */
+      .info-box { fill: #F47F29; stroke: #c56420; stroke-width: 2; }
+
+      /* テキスト */
       .text-white { font-family: 'Yu Gothic', sans-serif; font-size: 12px; fill: white; font-weight: bold; }
       .text-small { font-family: 'Yu Gothic', sans-serif; font-size: 10px; fill: white; }
-      .line { stroke: #34495e; stroke-width: 2; fill: none; }
+
+      /* 接続線 */
+      .line { stroke: #1A43AA; stroke-width: 2; fill: none; }
     </style>
   </defs>
 
