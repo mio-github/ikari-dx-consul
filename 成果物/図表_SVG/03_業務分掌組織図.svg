@@ -1,0 +1,460 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 3200">
+  <defs>
+    <style>
+      .title { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 28px; font-weight: bold; fill: #1a1a1a; }
+      .subtitle { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 16px; fill: #666; }
+      .exec-box { fill: #2c3e50; stroke: #1a252f; stroke-width: 2; }
+      .exec-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 14px; font-weight: bold; fill: white; }
+      .dept-box { fill: #3498db; stroke: #2980b9; stroke-width: 2; }
+      .dept-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 13px; font-weight: bold; fill: white; }
+      .subdept-box { fill: #5dade2; stroke: #3498db; stroke-width: 1.5; }
+      .subdept-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 11px; fill: white; }
+      .group-box { fill: #85c1e9; stroke: #5dade2; stroke-width: 1; }
+      .group-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 10px; fill: #1a1a1a; }
+      .support-box { fill: #95a5a6; stroke: #7f8c8d; stroke-width: 2; }
+      .support-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 12px; font-weight: bold; fill: white; }
+      .committee-box { fill: #e74c3c; stroke: #c0392b; stroke-width: 2; }
+      .committee-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 11px; font-weight: bold; fill: white; }
+      .line { stroke: #34495e; stroke-width: 2; fill: none; }
+      .dotted-line { stroke: #7f8c8d; stroke-width: 1.5; fill: none; stroke-dasharray: 5,5; }
+      .label { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 10px; fill: #2c3e50; }
+      .task-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 9px; fill: #1a1a1a; }
+    </style>
+  </defs>
+
+  <!-- タイトル -->
+  <text x="1200" y="40" text-anchor="middle" class="title">イカリ消毒株式会社 業務分掌組織図</text>
+  <text x="1200" y="65" text-anchor="middle" class="subtitle">2025年1月1日版</text>
+
+  <!-- 凡例 -->
+  <rect x="50" y="85" width="120" height="25" class="exec-box"/>
+  <text x="110" y="102" text-anchor="middle" class="exec-text">役員・経営層</text>
+
+  <rect x="180" y="85" width="120" height="25" class="dept-box"/>
+  <text x="240" y="102" text-anchor="middle" class="dept-text">主要部門</text>
+
+  <rect x="310" y="85" width="120" height="25" class="subdept-box"/>
+  <text x="370" y="102" text-anchor="middle" class="subdept-text">サブ部門</text>
+
+  <rect x="440" y="85" width="120" height="25" class="support-box"/>
+  <text x="500" y="102" text-anchor="middle" class="support-text">管理・支援部門</text>
+
+  <rect x="570" y="85" width="120" height="25" class="committee-box"/>
+  <text x="630" y="102" text-anchor="middle" class="committee-text">委員会</text>
+
+  <!-- 経営トップ -->
+  <rect x="1000" y="130" width="400" height="60" class="exec-box" rx="5"/>
+  <text x="1200" y="155" text-anchor="middle" class="exec-text" font-size="16px">代表取締役社長</text>
+  <text x="1200" y="175" text-anchor="middle" class="exec-text">黒澤 秀行（情報セキュリティ最高責任者）</text>
+
+  <!-- 役員 -->
+  <rect x="600" y="220" width="250" height="50" class="exec-box" rx="5"/>
+  <text x="725" y="240" text-anchor="middle" class="exec-text">取締役</text>
+  <text x="725" y="258" text-anchor="middle" class="exec-text" font-size="11px">車谷 悟史（業務管理・営業CS）</text>
+
+  <rect x="880" y="220" width="280" height="50" class="exec-box" rx="5"/>
+  <text x="1020" y="240" text-anchor="middle" class="exec-text">取締役</text>
+  <text x="1020" y="258" text-anchor="middle" class="exec-text" font-size="11px">榎田 順一（リスク・管理・商品開発）</text>
+
+  <rect x="1190" y="220" width="200" height="50" class="exec-box" rx="5"/>
+  <text x="1290" y="240" text-anchor="middle" class="exec-text">監査役</text>
+  <text x="1290" y="258" text-anchor="middle" class="exec-text">内野 長治</text>
+
+  <!-- 経営企画室（上席執行役員） -->
+  <rect x="100" y="310" width="2200" height="30" fill="#34495e" rx="3"/>
+  <text x="1200" y="332" text-anchor="middle" fill="white" font-size="16px" font-weight="bold">経営企画室（上席執行役員）</text>
+
+  <!-- 上席執行役員 5名 -->
+  <!-- 越野 一浩 -->
+  <rect x="120" y="360" width="420" height="100" class="dept-box" rx="5"/>
+  <text x="330" y="380" text-anchor="middle" class="dept-text" font-size="14px">地域担当：越野 一浩</text>
+  <text x="330" y="398" text-anchor="middle" class="subdept-text">北海道/東北/東海/関西/中四国/九州</text>
+  <text x="150" y="418" class="task-text">• 営業利益率向上</text>
+  <text x="150" y="432" class="task-text">• 管理職マネジメント教育</text>
+  <text x="150" y="446" class="task-text">• 予実管理（PDCA）</text>
+
+  <!-- 宮島 一也 -->
+  <rect x="560" y="360" width="380" height="100" class="dept-box" rx="5"/>
+  <text x="750" y="380" text-anchor="middle" class="dept-text" font-size="14px">首都圏担当：宮島 一也</text>
+  <text x="750" y="398" text-anchor="middle" class="subdept-text">関越/関東/東京営業部</text>
+  <text x="580" y="418" class="task-text">• 首都圏構想の構築</text>
+  <text x="580" y="432" class="task-text">• 新しい働き方の創出</text>
+  <text x="580" y="446" class="task-text">• 特定業務の集約による効率化</text>
+
+  <!-- 酒田 寛伸 -->
+  <rect x="960" y="360" width="380" height="100" class="dept-box" rx="5"/>
+  <text x="1150" y="380" text-anchor="middle" class="dept-text" font-size="14px">営業推進担当：酒田 寛伸</text>
+  <text x="1150" y="398" text-anchor="middle" class="subdept-text">営業推進部、住環境事業部等</text>
+  <text x="980" y="418" class="task-text">• 全社方針に基づく部門活動</text>
+  <text x="980" y="432" class="task-text">• 部門間連携の強化</text>
+
+  <!-- 道倉 達也 -->
+  <rect x="1360" y="360" width="380" height="100" class="dept-box" rx="5"/>
+  <text x="1550" y="380" text-anchor="middle" class="dept-text" font-size="14px">情報・開発担当：道倉 達也</text>
+  <text x="1550" y="398" text-anchor="middle" class="subdept-text">事業開発部</text>
+  <text x="1380" y="418" class="task-text">• 新事業（サービス）の開発</text>
+  <text x="1380" y="432" class="task-text">• 社内DXの推進、運営</text>
+  <text x="1380" y="446" class="task-text">• データのビジュアル化、実用化</text>
+
+  <!-- 吉浪 誠 -->
+  <rect x="1760" y="360" width="300" height="100" class="dept-box" rx="5"/>
+  <text x="1910" y="380" text-anchor="middle" class="dept-text" font-size="14px">技術担当：吉浪 誠</text>
+  <text x="1910" y="398" text-anchor="middle" class="subdept-text">技術・研究部門</text>
+  <text x="1780" y="418" class="task-text">• 技術サービス部</text>
+  <text x="1780" y="432" class="task-text">• 技術研究所</text>
+  <text x="1780" y="446" class="task-text">• 食品医薬/異物分析部</text>
+
+  <!-- 塩田 智哉 -->
+  <rect x="2080" y="360" width="220" height="100" class="dept-box" rx="5"/>
+  <text x="2190" y="380" text-anchor="middle" class="dept-text" font-size="13px">管理運営担当</text>
+  <text x="2190" y="398" text-anchor="middle" class="dept-text" font-size="13px">塩田 智哉</text>
+  <text x="2100" y="418" class="task-text">• 総務部</text>
+  <text x="2100" y="432" class="task-text">• 人事部</text>
+  <text x="2100" y="446" class="task-text">• 購買物流部等</text>
+
+  <!-- 管理・支援部門（横断） -->
+  <rect x="100" y="490" width="450" height="30" fill="#7f8c8d" rx="3"/>
+  <text x="325" y="512" text-anchor="middle" fill="white" font-size="14px" font-weight="bold">管理・支援部門</text>
+
+  <rect x="120" y="540" width="200" height="60" class="support-box" rx="4"/>
+  <text x="220" y="560" text-anchor="middle" class="support-text">業務管理室</text>
+  <text x="140" y="578" class="task-text">• 人時生産性発信</text>
+  <text x="140" y="590" class="task-text">• 月次報告発信</text>
+
+  <rect x="340" y="540" width="200" height="60" class="support-box" rx="4"/>
+  <text x="440" y="560" text-anchor="middle" class="support-text">リスク・</text>
+  <text x="440" y="575" text-anchor="middle" class="support-text">コンプライアンス室</text>
+  <text x="360" y="590" class="task-text">• リスク管理・BCP</text>
+
+  <rect x="120" y="620" width="200" height="60" class="support-box" rx="4"/>
+  <text x="220" y="640" text-anchor="middle" class="support-text">検査信頼性部門</text>
+  <text x="140" y="658" class="task-text">• ISO/IEC 17025認定</text>
+  <text x="140" y="670" class="task-text">• 登録検査機関維持</text>
+
+  <rect x="340" y="620" width="200" height="60" class="support-box" rx="4"/>
+  <text x="440" y="640" text-anchor="middle" class="support-text">海外事業部</text>
+  <text x="360" y="658" class="task-text">• 海外市場事業成立</text>
+  <text x="360" y="670" class="task-text">• 海外拠点運営全般</text>
+
+  <!-- 営業推進担当配下部門 -->
+  <rect x="600" y="490" width="700" height="30" fill="#3498db" rx="3"/>
+  <text x="950" y="512" text-anchor="middle" fill="white" font-size="14px" font-weight="bold">営業推進担当配下部門</text>
+
+  <rect x="620" y="540" width="180" height="70" class="subdept-box" rx="4"/>
+  <text x="710" y="560" text-anchor="middle" class="subdept-text" font-size="12px">特販部</text>
+  <text x="635" y="578" class="task-text">• コンシューマ市場</text>
+  <text x="635" y="590" class="task-text">• 物販事業再構築</text>
+  <text x="635" y="602" class="task-text">• お客様相談室</text>
+
+  <rect x="820" y="540" width="200" height="70" class="subdept-box" rx="4"/>
+  <text x="920" y="560" text-anchor="middle" class="subdept-text" font-size="12px">コンサルティング部</text>
+  <text x="835" y="578" class="task-text">• 情報発信（講演）</text>
+  <text x="835" y="590" class="task-text">• クリンネス大学</text>
+  <text x="835" y="602" class="task-text">• 食品安全コンサル</text>
+
+  <rect x="1040" y="540" width="240" height="70" class="subdept-box" rx="4"/>
+  <text x="1160" y="560" text-anchor="middle" class="subdept-text" font-size="12px">住環境事業部</text>
+  <text x="1055" y="578" class="task-text">• リフォーム防蟻・防蟻シート</text>
+  <text x="1055" y="590" class="task-text">• ミサワホーム事業</text>
+  <text x="1055" y="602" class="task-text">• 文化財事業推進</text>
+
+  <rect x="620" y="630" width="240" height="100" class="subdept-box" rx="4"/>
+  <text x="740" y="650" text-anchor="middle" class="subdept-text" font-size="12px">営業推進部</text>
+  <text x="635" y="668" class="task-text">• 大手食品・流通市場攻略</text>
+  <text x="635" y="680" class="task-text">• 大手パッケージ市場攻略</text>
+  <text x="635" y="692" class="task-text">• 本部一括契約窓口</text>
+  <text x="635" y="704" class="task-text">• 営業ガイドライン維持</text>
+  <text x="635" y="716" class="task-text">• 見積仕様作成規程管理</text>
+
+  <rect x="880" y="630" width="200" height="60" class="group-box" rx="3"/>
+  <text x="980" y="650" text-anchor="middle" class="group-text" font-size="11px">（ネット営業推進G）</text>
+  <text x="895" y="668" class="task-text">• 全国チェーン営業</text>
+  <text x="895" y="680" class="task-text">• 本社請求取りまとめ</text>
+
+  <!-- 情報・開発担当配下部門 -->
+  <rect x="1320" y="490" width="720" height="30" fill="#3498db" rx="3"/>
+  <text x="1680" y="512" text-anchor="middle" fill="white" font-size="14px" font-weight="bold">情報・開発担当配下部門（事業開発部）</text>
+
+  <rect x="1340" y="540" width="300" height="140" class="subdept-box" rx="4"/>
+  <text x="1490" y="560" text-anchor="middle" class="subdept-text" font-size="12px">情報システムグループ</text>
+  <text x="1355" y="578" class="task-text">• 総合経営管理システムヘルプデスク</text>
+  <text x="1355" y="590" class="task-text">• システム追加改修、障害対応</text>
+  <text x="1355" y="602" class="task-text">• データのビジュアル化、実用化</text>
+  <text x="1355" y="614" class="task-text">• ISO27001認証維持・事務局</text>
+  <text x="1355" y="626" class="task-text">• 情報ツール手配・設定・管理</text>
+  <text x="1355" y="638" class="task-text">• 社内ネットワーク構築・維持・管理</text>
+  <text x="1355" y="650" class="task-text">• ウイルス感染・脆弱性対応</text>
+  <text x="1355" y="662" class="task-text">• kintoneアプリ作成・維持管理</text>
+  <text x="1355" y="674" class="task-text">• 情報システム管理規程の管理</text>
+
+  <rect x="1660" y="540" width="180" height="100" class="subdept-box" rx="4"/>
+  <text x="1750" y="560" text-anchor="middle" class="subdept-text" font-size="12px">マーケティング</text>
+  <text x="1750" y="575" text-anchor="middle" class="subdept-text" font-size="12px">企画グループ</text>
+  <text x="1675" y="593" class="task-text">• 展示会マーケ活動</text>
+  <text x="1675" y="605" class="task-text">• 営業キャンペーン</text>
+  <text x="1675" y="617" class="task-text">• 新商品企画・展開</text>
+  <text x="1675" y="629" class="task-text">• スマートキャンパス</text>
+
+  <rect x="1860" y="540" width="170" height="100" class="subdept-box" rx="4"/>
+  <text x="1945" y="560" text-anchor="middle" class="subdept-text" font-size="12px">商品開発</text>
+  <text x="1945" y="575" text-anchor="middle" class="subdept-text" font-size="12px">グループ</text>
+  <text x="1875" y="593" class="task-text">• オリジナル商品</text>
+  <text x="1875" y="605" class="task-text">  研究開発</text>
+  <text x="1875" y="617" class="task-text">• CXシステム維持</text>
+  <text x="1875" y="629" class="task-text">• 知的財産調査</text>
+
+  <!-- 技術担当配下部門 -->
+  <rect x="100" y="750" width="900" height="30" fill="#3498db" rx="3"/>
+  <text x="550" y="772" text-anchor="middle" fill="white" font-size="14px" font-weight="bold">技術担当配下部門</text>
+
+  <rect x="120" y="800" width="200" height="110" class="subdept-box" rx="4"/>
+  <text x="220" y="820" text-anchor="middle" class="subdept-text" font-size="12px">異物分析部</text>
+  <text x="135" y="838" class="task-text">• 異物検査・トラップ検査</text>
+  <text x="135" y="850" class="task-text">• 検査技術の開発</text>
+  <text x="135" y="862" class="task-text">• モニタリング技能認定</text>
+  <text x="135" y="874" class="task-text">• クリンネス大学講師</text>
+  <text x="135" y="886" class="task-text">• 営業所検査規程管理</text>
+  <text x="135" y="898" class="task-text">• トラップ工程管理システム</text>
+
+  <rect x="340" y="800" width="220" height="150" class="subdept-box" rx="4"/>
+  <text x="450" y="820" text-anchor="middle" class="subdept-text" font-size="12px">食品医薬分析部</text>
+  <text x="355" y="838" class="task-text">• 微生物・理化学検査</text>
+  <text x="355" y="850" class="task-text">• ISO/IEC17025認定維持</text>
+  <text x="355" y="862" class="task-text">• 厚労大臣登録検査機関維持</text>
+  <text x="355" y="874" class="task-text">• 計量証明事業維持</text>
+  <text x="355" y="886" class="task-text">• 環境測定用機器貸出し</text>
+  <text x="355" y="898" class="task-text">• 微生物モニタリング研修</text>
+  <text x="355" y="910" class="task-text">• 新規検査事業開発</text>
+  <text x="355" y="922" class="task-text">• 検査営業・売上目標</text>
+  <text x="355" y="934" class="task-text">• LCS施設・設備維持管理</text>
+
+  <rect x="580" y="800" width="200" height="120" class="subdept-box" rx="4"/>
+  <text x="680" y="820" text-anchor="middle" class="subdept-text" font-size="12px">技術研究所</text>
+  <text x="595" y="838" class="task-text">• 新技術基礎研究</text>
+  <text x="595" y="850" class="task-text">• 客観的データ提供</text>
+  <text x="595" y="862" class="task-text">• 商品開発実証実験</text>
+  <text x="595" y="874" class="task-text">• 現場支援（技術・営業）</text>
+  <text x="595" y="886" class="task-text">• LCS内飼育施設維持</text>
+  <text x="595" y="898" class="task-text">• 大学・研究機関連携</text>
+  <text x="595" y="910" class="task-text">• 動物実験審議会庶務</text>
+
+  <rect x="800" y="800" width="190" height="100" class="subdept-box" rx="4"/>
+  <text x="895" y="820" text-anchor="middle" class="subdept-text" font-size="12px">技術サービス部</text>
+  <text x="815" y="838" class="task-text">• 社内外研修・講義</text>
+  <text x="815" y="850" class="task-text">• 新商品・新サービス</text>
+  <text x="815" y="862" class="task-text">  開発活動</text>
+  <text x="815" y="874" class="task-text">• 業務支援依頼対応</text>
+  <text x="815" y="886" class="task-text">• 技術ガイドライン</text>
+  <text x="815" y="898" class="task-text">  維持管理</text>
+
+  <!-- 管理運営担当配下部門 -->
+  <rect x="1020" y="750" width="1280" height="30" fill="#3498db" rx="3"/>
+  <text x="1660" y="772" text-anchor="middle" fill="white" font-size="14px" font-weight="bold">管理運営担当配下部門</text>
+
+  <rect x="1040" y="800" width="200" height="90" class="subdept-box" rx="4"/>
+  <text x="1140" y="820" text-anchor="middle" class="subdept-text" font-size="12px">品質管理部</text>
+  <text x="1055" y="838" class="task-text">• ISO9001品質向上活動</text>
+  <text x="1055" y="850" class="task-text">• ISO9001認証維持</text>
+  <text x="1055" y="862" class="task-text">• 業務系規程維持管理</text>
+  <text x="1055" y="874" class="task-text">• 社内監査業務</text>
+  <text x="1055" y="886" class="task-text">• 苦情の集計・分析</text>
+
+  <rect x="1260" y="800" width="200" height="120" class="subdept-box" rx="4"/>
+  <text x="1360" y="820" text-anchor="middle" class="subdept-text" font-size="12px">人事部</text>
+  <text x="1275" y="838" class="task-text">• 人員計画立案・管理</text>
+  <text x="1275" y="850" class="task-text">• 人事制度整備・統制</text>
+  <text x="1275" y="862" class="task-text">• 評価会議運営</text>
+  <text x="1275" y="874" class="task-text">• 要員管理（採用・異動）</text>
+  <text x="1275" y="886" class="task-text">• 昇給・賞与・昇格</text>
+  <text x="1275" y="898" class="task-text">• 教育訓練・資格管理</text>
+  <text x="1275" y="910" class="task-text">• 新規・中途採用</text>
+
+  <rect x="1480" y="800" width="180" height="100" class="subdept-box" rx="4"/>
+  <text x="1570" y="820" text-anchor="middle" class="subdept-text" font-size="12px">CSR推進部</text>
+  <text x="1495" y="838" class="task-text">• CSR活動推進</text>
+  <text x="1495" y="850" class="task-text">• 障がい者雇用推進</text>
+  <text x="1495" y="862" class="task-text">• しあわせ工房対応</text>
+  <text x="1495" y="874" class="task-text">• 傷病者職場復帰支援</text>
+  <text x="1495" y="886" class="task-text">• BtoC情報発信</text>
+  <text x="1495" y="898" class="task-text">• 教育機関支援活動</text>
+
+  <rect x="1680" y="800" width="160" height="60" class="group-box" rx="3"/>
+  <text x="1760" y="820" text-anchor="middle" class="group-text" font-size="11px">（広報G）</text>
+  <text x="1695" y="838" class="task-text">• 対外・社内情報発信</text>
+  <text x="1695" y="850" class="task-text">• 映像制作全般</text>
+
+  <rect x="1040" y="910" width="200" height="100" class="subdept-box" rx="4"/>
+  <text x="1140" y="930" text-anchor="middle" class="subdept-text" font-size="12px">関連事業部</text>
+  <text x="1140" y="948" text-anchor="middle" class="subdept-text" font-size="10px">（のれん・FC社管理）</text>
+  <text x="1055" y="966" class="task-text">• ロイヤリティ管理</text>
+  <text x="1055" y="978" class="task-text">• 購買代行業務</text>
+  <text x="1055" y="990" class="task-text">• 検査受付代行</text>
+  <text x="1055" y="1002" class="task-text">• LC のれん会事務局</text>
+
+  <rect x="1260" y="910" width="200" height="100" class="subdept-box" rx="4"/>
+  <text x="1360" y="930" text-anchor="middle" class="subdept-text" font-size="12px">ネットワーク開発部</text>
+  <text x="1275" y="948" class="task-text">• 新規取引先開拓</text>
+  <text x="1275" y="960" class="task-text">• 外注先管理</text>
+  <text x="1275" y="972" class="task-text">• 仕入先登録審査</text>
+  <text x="1275" y="984" class="task-text">• エコシス会対応</text>
+  <text x="1275" y="996" class="task-text">• 建設業登録全般</text>
+
+  <rect x="1480" y="910" width="200" height="130" class="subdept-box" rx="4"/>
+  <text x="1580" y="930" text-anchor="middle" class="subdept-text" font-size="12px">購買物流部</text>
+  <text x="1495" y="948" class="task-text">• 仕入業務全般</text>
+  <text x="1495" y="960" class="task-text">• 法定商品受注窓口</text>
+  <text x="1495" y="972" class="task-text">• 仕入先・外注先請求管理</text>
+  <text x="1495" y="984" class="task-text">• 在庫管理全般</text>
+  <text x="1495" y="996" class="task-text">• 商品発掘・販促支援</text>
+  <text x="1495" y="1008" class="task-text">• オリジナル商品管理</text>
+  <text x="1495" y="1020" class="task-text">• レンタル商品管理</text>
+  <text x="1495" y="1032" class="task-text">• 購買管理規程管理</text>
+
+  <rect x="1700" y="910" width="280" height="180" class="subdept-box" rx="4"/>
+  <text x="1840" y="930" text-anchor="middle" class="subdept-text" font-size="12px">総務部</text>
+  <text x="1715" y="948" class="task-text">• 新規拠点出店・移転・廃止窓口</text>
+  <text x="1715" y="960" class="task-text">• 就業規則系規程管理</text>
+  <text x="1715" y="972" class="task-text">• 事故損害賠償保険対応</text>
+  <text x="1715" y="984" class="task-text">• 社長印・社印保管</text>
+  <text x="1715" y="996" class="task-text">• 会社謄本・印鑑証明管理</text>
+  <text x="1715" y="1008" class="task-text">• 稟議書・申請書受付</text>
+  <text x="1715" y="1020" class="task-text">• 入退社事務処理</text>
+  <text x="1715" y="1032" class="task-text">• 勤怠管理・賃金計算</text>
+  <text x="1715" y="1044" class="task-text">• 社会保険業務</text>
+  <text x="1715" y="1056" class="task-text">• 福利厚生施設運用</text>
+  <text x="1715" y="1068" class="task-text">• 車両管理・備蓄品管理</text>
+  <text x="1715" y="1080" class="task-text">• 秘書業務全般</text>
+
+  <rect x="2000" y="910" width="140" height="60" class="group-box" rx="3"/>
+  <text x="2070" y="930" text-anchor="middle" class="group-text" font-size="11px">（法務G）</text>
+  <text x="2015" y="948" class="task-text">• 法務相談窓口</text>
+  <text x="2015" y="960" class="task-text">• 契約書審査</text>
+
+  <rect x="2160" y="910" width="130" height="60" class="group-box" rx="3"/>
+  <text x="2225" y="930" text-anchor="middle" class="group-text" font-size="11px">（経理G）</text>
+  <text x="2175" y="948" class="task-text">• 金銭出納保管</text>
+  <text x="2175" y="960" class="task-text">• 税務申告</text>
+
+  <!-- 委員会 -->
+  <rect x="100" y="1100" width="2200" height="30" fill="#c0392b" rx="3"/>
+  <text x="1200" y="1122" text-anchor="middle" fill="white" font-size="16px" font-weight="bold">委員会</text>
+
+  <rect x="200" y="1150" width="480" height="110" class="committee-box" rx="4"/>
+  <text x="440" y="1170" text-anchor="middle" class="committee-text" font-size="13px">リスク・コンプライアンス委員会</text>
+  <text x="215" y="1188" class="task-text" fill="white">• コンプライアンス重視の企業風土醸成</text>
+  <text x="215" y="1200" class="task-text" fill="white">• 企業倫理の確立</text>
+  <text x="215" y="1212" class="task-text" fill="white">• 法令遵守トータルプログラム策定</text>
+  <text x="215" y="1224" class="task-text" fill="white">• リスク情報の収集・伝達・交換統制管理</text>
+  <text x="215" y="1236" class="task-text" fill="white">• 事案発生時の対応策・改善策策定</text>
+  <text x="215" y="1248" class="task-text" fill="white">• 従業員の服務規律対応</text>
+
+  <rect x="700" y="1150" width="450" height="100" class="committee-box" rx="4"/>
+  <text x="925" y="1170" text-anchor="middle" class="committee-text" font-size="13px">安全委員会</text>
+  <text x="715" y="1188" class="task-text" fill="white">• 事故・苦情の減少に向けた全社取組み</text>
+  <text x="715" y="1200" class="task-text" fill="white">• リスクアセスメントによる再発防止</text>
+  <text x="715" y="1212" class="task-text" fill="white">• 月次情報発信（安全委員会 事故苦情まとめ）</text>
+  <text x="715" y="1224" class="task-text" fill="white">• 安全管理規程・事故対応規程の管理</text>
+  <text x="715" y="1236" class="task-text" fill="white">• 安全管理教育</text>
+
+  <rect x="1170" y="1150" width="480" height="80" class="committee-box" rx="4"/>
+  <text x="1410" y="1170" text-anchor="middle" class="committee-text" font-size="13px">情報セキュリティ委員会</text>
+  <text x="1185" y="1188" class="task-text" fill="white">• ISMSの有効性と適切性のレビュー</text>
+  <text x="1185" y="1200" class="task-text" fill="white">• 「ISMSマニュアル」に関する事項の審議</text>
+  <text x="1185" y="1212" class="task-text" fill="white">• 全社情報セキュリティ及び個人情報保護法</text>
+  <text x="1185" y="1224" class="task-text" fill="white">  諸対応の審議・決定</text>
+
+  <rect x="1670" y="1150" width="580" height="120" class="committee-box" rx="4"/>
+  <text x="1960" y="1170" text-anchor="middle" class="committee-text" font-size="13px">特定個人情報等漏洩等事故調査委員会</text>
+  <text x="1960" y="1188" text-anchor="middle" class="task-text" fill="white" font-size="10px">※情報セキュリティ委員により構成</text>
+  <text x="1685" y="1204" class="task-text" fill="white">• 特定個人情報等の漏洩事故発生時の諸対応:</text>
+  <text x="1700" y="1218" class="task-text" fill="white">  ① 事実関係の調査及び原因の究明</text>
+  <text x="1700" y="1230" class="task-text" fill="white">  ② 影響を受ける可能性のある本人への連絡</text>
+  <text x="1700" y="1242" class="task-text" fill="white">  ③ 特定個人情報保護委員会及び法務大臣への報告</text>
+  <text x="1700" y="1254" class="task-text" fill="white">  ④ 再発防止策の検討及び決定</text>
+  <text x="1700" y="1266" class="task-text" fill="white">  ⑤ 事実関係及び再発防止策等の公表</text>
+
+  <!-- 組織構造の接続線 -->
+  <!-- 社長から役員へ -->
+  <line x1="1200" y1="190" x2="725" y2="220" class="line"/>
+  <line x1="1200" y1="190" x2="1020" y2="220" class="line"/>
+  <line x1="1200" y1="190" x2="1290" y2="220" class="line"/>
+
+  <!-- 社長から経営企画室へ -->
+  <line x1="1200" y1="190" x2="1200" y2="310" class="line"/>
+
+  <!-- 経営企画室から各担当へ -->
+  <line x1="330" y1="340" x2="330" y2="360" class="line"/>
+  <line x1="750" y1="340" x2="750" y2="360" class="line"/>
+  <line x1="1150" y1="340" x2="1150" y2="360" class="line"/>
+  <line x1="1550" y1="340" x2="1550" y2="360" class="line"/>
+  <line x1="1910" y1="340" x2="1910" y2="360" class="line"/>
+  <line x1="2190" y1="340" x2="2190" y2="360" class="line"/>
+
+  <!-- 管理・支援部門への点線 -->
+  <line x1="325" y1="520" x2="220" y2="540" class="dotted-line"/>
+  <line x1="325" y1="520" x2="440" y2="540" class="dotted-line"/>
+  <line x1="325" y1="520" x2="220" y2="620" class="dotted-line"/>
+  <line x1="325" y1="520" x2="440" y2="620" class="dotted-line"/>
+
+  <!-- 営業推進担当配下への線 -->
+  <line x1="950" y1="520" x2="710" y2="540" class="line"/>
+  <line x1="950" y1="520" x2="920" y2="540" class="line"/>
+  <line x1="950" y1="520" x2="1160" y2="540" class="line"/>
+  <line x1="950" y1="520" x2="740" y2="630" class="line"/>
+  <line x1="950" y1="520" x2="980" y2="630" class="line"/>
+
+  <!-- 情報開発担当配下への線 -->
+  <line x1="1680" y1="520" x2="1490" y2="540" class="line"/>
+  <line x1="1680" y1="520" x2="1750" y2="540" class="line"/>
+  <line x1="1680" y1="520" x2="1945" y2="540" class="line"/>
+
+  <!-- 技術担当配下への線 -->
+  <line x1="550" y1="780" x2="220" y2="800" class="line"/>
+  <line x1="550" y1="780" x2="450" y2="800" class="line"/>
+  <line x1="550" y1="780" x2="680" y2="800" class="line"/>
+  <line x1="550" y1="780" x2="895" y2="800" class="line"/>
+
+  <!-- 管理運営担当配下への線 -->
+  <line x1="1660" y1="780" x2="1140" y2="800" class="line"/>
+  <line x1="1660" y1="780" x2="1360" y2="800" class="line"/>
+  <line x1="1660" y1="780" x2="1570" y2="800" class="line"/>
+  <line x1="1660" y1="780" x2="1760" y2="800" class="line"/>
+  <line x1="1660" y1="780" x2="1140" y2="910" class="line"/>
+  <line x1="1660" y1="780" x2="1360" y2="910" class="line"/>
+  <line x1="1660" y1="780" x2="1580" y2="910" class="line"/>
+  <line x1="1660" y1="780" x2="1840" y2="910" class="line"/>
+
+  <!-- 委員会への点線 -->
+  <line x1="1200" y1="190" x2="440" y2="1150" class="dotted-line"/>
+  <line x1="1200" y1="190" x2="925" y2="1150" class="dotted-line"/>
+  <line x1="1200" y1="190" x2="1410" y2="1150" class="dotted-line"/>
+  <line x1="1200" y1="190" x2="1960" y2="1150" class="dotted-line"/>
+
+  <!-- 凡例・注釈 -->
+  <text x="100" y="1310" class="label" font-size="11px">【凡例】</text>
+  <line x1="100" y1="1325" x2="150" y2="1325" class="line"/>
+  <text x="160" y="1330" class="label">: 直接的な指揮命令系統</text>
+
+  <line x1="100" y1="1345" x2="150" y2="1345" class="dotted-line"/>
+  <text x="160" y="1350" class="label">: 間接的な連携・報告系統</text>
+
+  <text x="100" y="1380" class="label" font-size="11px">【組織の特徴】</text>
+  <text x="100" y="1400" class="label">• 経営企画室の上席執行役員6名が各領域を統括</text>
+  <text x="100" y="1415" class="label">• 情報システムGが事業開発部内でDX推進を担当</text>
+  <text x="100" y="1430" class="label">• 4つの委員会が全社横断的にリスク・品質・セキュリティを管理</text>
+  <text x="100" y="1445" class="label">• ISO9001/ISO27001/ISO17025等の国際認証を複数保持</text>
+
+  <text x="1800" y="1380" class="label" font-size="11px">【主要グループ（G）】</text>
+  <text x="1800" y="1400" class="label">• 情報システムG: DX推進、システム管理、データ活用</text>
+  <text x="1800" y="1415" class="label">• マーケティング企画G: 展示会、キャンペーン、新商品企画</text>
+  <text x="1800" y="1430" class="label">• 商品開発G: オリジナル商品開発、知的財産管理</text>
+  <text x="1800" y="1445" class="label">• ネット営業推進G: 全国チェーン営業、本社請求</text>
+  <text x="1800" y="1460" class="label">• 広報G: 対外・社内情報発信、映像制作</text>
+  <text x="1800" y="1475" class="label">• 法務G: 法務相談、契約書審査、規程管理</text>
+  <text x="1800" y="1490" class="label">• 経理G: 金銭管理、税務申告、財務諸表作成</text>
+
+  <!-- フッター -->
+  <rect x="0" y="3150" width="2400" height="50" fill="#ecf0f1"/>
+  <text x="1200" y="3175" text-anchor="middle" class="label" font-size="12px">イカリ消毒株式会社 業務分掌一覧（2025年1月1日版）</text>
+  <text x="1200" y="3190" text-anchor="middle" class="label" font-size="10px">作成部署: 総務部 | ㊙社外秘</text>
+</svg>

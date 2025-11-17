@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1600">
+  <defs>
+    <style>
+      .title { font-family: 'Yu Gothic', sans-serif; font-size: 24px; font-weight: bold; fill: #2c3e50; }
+      .subtitle { font-family: 'Yu Gothic', sans-serif; font-size: 14px; fill: #7f8c8d; }
+      .dept-box { fill: #3498db; stroke: #2980b9; stroke-width: 2; }
+      .exec-box { fill: #e74c3c; stroke: #c0392b; stroke-width: 2; }
+      .mgmt-box { fill: #27ae60; stroke: #229954; stroke-width: 2; }
+      .sales-box { fill: #f39c12; stroke: #d68910; stroke-width: 2; }
+      .tech-box { fill: #9b59b6; stroke: #8e44ad; stroke-width: 2; }
+      .info-box { fill: #1abc9c; stroke: #16a085; stroke-width: 2; }
+      .text-white { font-family: 'Yu Gothic', sans-serif; font-size: 12px; fill: white; font-weight: bold; }
+      .text-small { font-family: 'Yu Gothic', sans-serif; font-size: 10px; fill: white; }
+      .line { stroke: #34495e; stroke-width: 2; fill: none; }
+    </style>
+  </defs>
+
+  <!-- タイトル -->
+  <text x="700" y="30" class="title" text-anchor="middle">イカリ消毒株式会社 組織構造図</text>
+  <text x="700" y="50" class="subtitle" text-anchor="middle">2025年1月時点</text>
+
+  <!-- 代表取締役社長 -->
+  <rect x="600" y="80" width="200" height="60" class="exec-box" rx="5"/>
+  <text x="700" y="105" class="text-white" text-anchor="middle">代表取締役社長</text>
+  <text x="700" y="125" class="text-white" text-anchor="middle">黒澤 秀行</text>
+
+  <!-- 取締役 -->
+  <rect x="250" y="80" width="150" height="60" class="exec-box" rx="5"/>
+  <text x="325" y="105" class="text-white" text-anchor="middle">取締役</text>
+  <text x="325" y="125" class="text-white" text-anchor="middle">車谷 悟史</text>
+
+  <rect x="950" y="80" width="150" height="60" class="exec-box" rx="5"/>
+  <text x="1025" y="105" class="text-white" text-anchor="middle">取締役</text>
+  <text x="1025" y="125" class="text-white" text-anchor="middle">榎田 順一</text>
+
+  <!-- 経営企画室 -->
+  <rect x="550" y="180" width="300" height="50" class="dept-box" rx="5"/>
+  <text x="700" y="210" class="text-white" text-anchor="middle" font-size="14px">経営企画室</text>
+  <line x1="700" y1="140" x2="700" y2="180" class="line"/>
+
+  <!-- 上席執行役員（経営企画室メンバー） -->
+  <g id="executives">
+    <!-- 地域営業担当 -->
+    <rect x="50" y="270" width="200" height="80" class="sales-box" rx="5"/>
+    <text x="150" y="295" class="text-white" text-anchor="middle">地域営業担当</text>
+    <text x="150" y="315" class="text-white" text-anchor="middle">越野 一浩</text>
+    <text x="150" y="335" class="text-small" text-anchor="middle">九州/中四国/関西</text>
+    <text x="150" y="345" class="text-small" text-anchor="middle">東海/東北/北海道</text>
+    <line x1="150" y1="230" x2="150" y2="270" class="line"/>
+    <line x1="550" y1="230" x2="150" y2="230" class="line"/>
+    <line x1="700" y1="230" x2="550" y2="230" class="line"/>
+
+    <!-- 首都圏担当 -->
+    <rect x="270" y="270" width="200" height="80" class="sales-box" rx="5"/>
+    <text x="370" y="295" class="text-white" text-anchor="middle">首都圏担当</text>
+    <text x="370" y="315" class="text-white" text-anchor="middle">宮島 一也</text>
+    <text x="370" y="335" class="text-small" text-anchor="middle">関越/関東/東京</text>
+    <line x1="370" y1="230" x2="370" y2="270" class="line"/>
+
+    <!-- 営業推進担当 -->
+    <rect x="490" y="270" width="200" height="80" class="sales-box" rx="5"/>
+    <text x="590" y="295" class="text-white" text-anchor="middle">営業推進担当</text>
+    <text x="590" y="315" class="text-white" text-anchor="middle">酒田 寛伸</text>
+    <text x="590" y="335" class="text-small" text-anchor="middle">営業推進/特販</text>
+    <text x="590" y="345" class="text-small" text-anchor="middle">コンサル/住環境</text>
+    <line x1="590" y1="230" x2="590" y2="270" class="line"/>
+
+    <!-- 情報・開発担当 -->
+    <rect x="710" y="270" width="200" height="80" class="info-box" rx="5"/>
+    <text x="810" y="295" class="text-white" text-anchor="middle">情報・開発担当</text>
+    <text x="810" y="315" class="text-white" text-anchor="middle">道倉 達也</text>
+    <text x="810" y="335" class="text-small" text-anchor="middle">事業開発部</text>
+    <text x="810" y="345" class="text-small" text-anchor="middle">★DX推進統括★</text>
+    <line x1="810" y1="230" x2="810" y2="270" class="line"/>
+
+    <!-- 技術担当 -->
+    <rect x="930" y="270" width="200" height="80" class="tech-box" rx="5"/>
+    <text x="1030" y="295" class="text-white" text-anchor="middle">技術担当</text>
+    <text x="1030" y="315" class="text-white" text-anchor="middle">吉浪 誠</text>
+    <text x="1030" y="335" class="text-small" text-anchor="middle">技術サービス/研究所</text>
+    <text x="1030" y="345" class="text-small" text-anchor="middle">分析部門</text>
+    <line x1="1030" y1="230" x2="1030" y2="270" class="line"/>
+
+    <!-- 管理運営担当 -->
+    <rect x="1150" y="270" width="200" height="80" class="mgmt-box" rx="5"/>
+    <text x="1250" y="295" class="text-white" text-anchor="middle">管理運営担当</text>
+    <text x="1250" y="315" class="text-white" text-anchor="middle">塩田 智哉</text>
+    <text x="1250" y="335" class="text-small" text-anchor="middle">総務/人事/購買</text>
+    <text x="1250" y="345" class="text-small" text-anchor="middle">品質/CSR/関連事業</text>
+    <line x1="1250" y1="230" x2="1250" y2="270" class="line"/>
+    <line x1="850" y1="230" x2="1250" y2="230" class="line"/>
+  </g>
+
+  <!-- 主要部門（第2階層） -->
+  <g id="departments">
+    <!-- 事業開発部の詳細 -->
+    <rect x="710" y="400" width="200" height="120" class="info-box" rx="5"/>
+    <text x="810" y="425" class="text-white" text-anchor="middle" font-weight="bold">事業開発部</text>
+    <text x="810" y="445" class="text-small" text-anchor="middle">・情報システムG</text>
+    <text x="810" y="460" class="text-small" text-anchor="middle">・マーケティング企画G</text>
+    <text x="810" y="475" class="text-small" text-anchor="middle">・商品開発G</text>
+    <text x="810" y="495" class="text-small" text-anchor="middle" font-weight="bold">総合経営管理システム</text>
+    <text x="810" y="510" class="text-small" text-anchor="middle" font-weight="bold">kintone / AWS環境</text>
+    <line x1="810" y1="350" x2="810" y2="400" class="line"/>
+
+    <!-- 技術系部門 -->
+    <rect x="930" y="400" width="200" height="120" class="tech-box" rx="5"/>
+    <text x="1030" y="425" class="text-white" text-anchor="middle" font-weight="bold">技術系部門</text>
+    <text x="1030" y="445" class="text-small" text-anchor="middle">・技術サービス部</text>
+    <text x="1030" y="460" class="text-small" text-anchor="middle">・技術研究所</text>
+    <text x="1030" y="475" class="text-small" text-anchor="middle">・食品医薬分析部</text>
+    <text x="1030" y="490" class="text-small" text-anchor="middle">・異物分析部</text>
+    <text x="1030" y="510" class="text-small" text-anchor="middle" font-weight="bold">ISO/IEC17025認定</text>
+    <line x1="1030" y1="350" x2="1030" y2="400" class="line"/>
+
+    <!-- 管理系部門 -->
+    <rect x="1150" y="400" width="200" height="120" class="mgmt-box" rx="5"/>
+    <text x="1250" y="425" class="text-white" text-anchor="middle" font-weight="bold">管理系部門</text>
+    <text x="1250" y="445" class="text-small" text-anchor="middle">・総務部（法務/経理G）</text>
+    <text x="1250" y="460" class="text-small" text-anchor="middle">・人事部</text>
+    <text x="1250" y="475" class="text-small" text-anchor="middle">・購買物流部</text>
+    <text x="1250" y="490" class="text-small" text-anchor="middle">・品質管理部</text>
+    <text x="1250" y="505" class="text-small" text-anchor="middle">・CSR推進部</text>
+    <line x1="1250" y1="350" x2="1250" y2="400" class="line"/>
+  </g>
+
+  <!-- 特記事項 -->
+  <g id="notes">
+    <rect x="50" y="1450" width="1300" height="120" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="2" rx="5"/>
+    <text x="70" y="1475" style="font-family: 'Yu Gothic', sans-serif; font-size: 14px; font-weight: bold; fill: #2c3e50;">組織の特徴</text>
+    <text x="70" y="1500" style="font-family: 'Yu Gothic', sans-serif; font-size: 11px; fill: #34495e;">
+      ① 6名の上席執行役員が経営企画室メンバーとして各領域を統括
+    </text>
+    <text x="70" y="1520" style="font-family: 'Yu Gothic', sans-serif; font-size: 11px; fill: #34495e;">
+      ② 情報・開発担当（道倉氏）が事業開発部を通じてDX推進を統括
+    </text>
+    <text x="70" y="1540" style="font-family: 'Yu Gothic', sans-serif; font-size: 11px; fill: #34495e;">
+      ③ 全国ネットワーク（九州/中四国/関西/東海/東北/北海道 + 首都圏）を展開
+    </text>
+    <text x="70" y="1560" style="font-family: 'Yu Gothic', sans-serif; font-size: 11px; fill: #34495e;">
+      ④ ISO9001、ISO27001、ISO/IEC17025等の国際認証を保持
+    </text>
+  </g>
+
+  <!-- 凡例 -->
+  <g id="legend">
+    <rect x="50" y="560" width="150" height="25" class="exec-box" rx="3"/>
+    <text x="130" y="578" class="text-white" text-anchor="middle" font-size="11px">役員</text>
+
+    <rect x="50" y="595" width="150" height="25" class="sales-box" rx="3"/>
+    <text x="130" y="613" class="text-white" text-anchor="middle" font-size="11px">営業系</text>
+
+    <rect x="50" y="630" width="150" height="25" class="info-box" rx="3"/>
+    <text x="130" y="648" class="text-white" text-anchor="middle" font-size="11px">情報・開発系</text>
+
+    <rect x="50" y="665" width="150" height="25" class="tech-box" rx="3"/>
+    <text x="130" y="683" class="text-white" text-anchor="middle" font-size="11px">技術系</text>
+
+    <rect x="50" y="700" width="150" height="25" class="mgmt-box" rx="3"/>
+    <text x="130" y="718" class="text-white" text-anchor="middle" font-size="11px">管理系</text>
+  </g>
+</svg>

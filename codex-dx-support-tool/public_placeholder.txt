@@ -1,0 +1,1 @@
+Add static assets such as favicons here if needed.

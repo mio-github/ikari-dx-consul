@@ -1,0 +1,156 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+h1, h2, h3 {
+  color: #1a237e;
+}
+
+h1 {
+    border-bottom: 2px solid #3f51b5;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+
+/* Sidebar Styles */
+.sidebar {
+  width: 250px;
+  background-color: #1a237e; /* Dark Blue */
+  color: #ffffff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav li {
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sidebar-nav li.active, .sidebar-nav li:hover {
+  background-color: #3f51b5; /* Lighter Blue */
+}
+
+/* Document List Styles */
+.document-list ul {
+    list-style: none;
+    padding: 0;
+}
+.document-list li {
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+.document-list li:last-child {
+    border-bottom: none;
+}
+.document-title {
+    font-weight: bold;
+    color: #3f51b5;
+}
+.document-summary {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Issue List Styles */
+.issue-list .issue-item {
+    border-left: 4px solid #f44336; /* Red */
+    padding: 15px;
+    background-color: #fef5f5;
+    margin-bottom: 15px;
+    border-radius: 0 4px 4px 0;
+}
+.issue-category {
+    font-weight: bold;
+    color: #d32f2f;
+    margin-bottom: 5px;
+}
+
+/* Roadmap Styles */
+.roadmap-timeline {
+    position: relative;
+    padding: 20px 0;
+}
+.roadmap-timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #3f51b5;
+}
+.timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+    padding-left: 50px;
+}
+.timeline-dot {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 4px solid #3f51b5;
+}
+.timeline-date {
+    font-weight: bold;
+    color: #1a237e;
+}
+.timeline-content h3 {
+    margin-top: 5px;
+    color: #3f51b5;
+}

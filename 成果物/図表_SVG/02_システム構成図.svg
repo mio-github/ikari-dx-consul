@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1200">
+  <defs>
+    <style>
+      .title { font-family: 'Yu Gothic', sans-serif; font-size: 24px; font-weight: bold; fill: #2c3e50; }
+      .subtitle { font-family: 'Yu Gothic', sans-serif; font-size: 14px; fill: #7f8c8d; }
+      .core-system { fill: #e74c3c; stroke: #c0392b; stroke-width: 2; }
+      .dept-system { fill: #3498db; stroke: #2980b9; stroke-width: 2; }
+      .cloud-service { fill: #1abc9c; stroke: #16a085; stroke-width: 2; }
+      .security { fill: #9b59b6; stroke: #8e44ad; stroke-width: 2; }
+      .text-white { font-family: 'Yu Gothic', sans-serif; font-size: 12px; fill: white; font-weight: bold; }
+      .text-small { font-family: 'Yu Gothic', sans-serif; font-size: 10px; fill: white; }
+      .line { stroke: #34495e; stroke-width: 2; fill: none; }
+      .line-data { stroke: #e67e22; stroke-width: 3; fill: none; stroke-dasharray: 5,5; }
+      .arrow { fill: #34495e; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" class="arrow" />
+    </marker>
+    <marker id="arrowhead-data" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#e67e22" />
+    </marker>
+  </defs>
+
+  <!-- タイトル -->
+  <text x="700" y="30" class="title" text-anchor="middle">イカリ消毒株式会社 システム構成図</text>
+  <text x="700" y="50" class="subtitle" text-anchor="middle">現行システムの全体像（2025年1月時点）</text>
+
+  <!-- 中核システム -->
+  <g id="core">
+    <rect x="500" y="100" width="400" height="100" class="core-system" rx="10"/>
+    <text x="700" y="130" class="text-white" text-anchor="middle" font-size="18px">総合経営管理システム</text>
+    <text x="700" y="155" class="text-small" text-anchor="middle">【中核基幹システム】</text>
+    <text x="700" y="175" class="text-small" text-anchor="middle">データのビジュアル化推進中</text>
+    <text x="700" y="190" class="text-small" text-anchor="middle">管理: 情報システムG（ヘルプデスク/改修/障害対応）</text>
+  </g>
+
+  <!-- 部門別システム（左側） -->
+  <g id="dept-systems-left">
+    <!-- イカリナビシステム -->
+    <rect x="50" y="280" width="250" height="80" class="dept-system" rx="5"/>
+    <text x="175" y="310" class="text-white" text-anchor="middle" font-weight="bold">イカリナビシステム</text>
+    <text x="175" y="330" class="text-small" text-anchor="middle">社内情報共有・ナビゲーション</text>
+    <text x="175" y="345" class="text-small" text-anchor="middle">ID・アクセス権管理</text>
+    <text x="175" y="355" class="text-small" text-anchor="middle">管理: 情報システムG</text>
+    <line x1="300" y1="320" x2="500" y2="150" class="line" marker-end="url(#arrowhead)"/>
+
+    <!-- CXシステム -->
+    <rect x="50" y="380" width="250" height="80" class="dept-system" rx="5"/>
+    <text x="175" y="410" class="text-white" text-anchor="middle" font-weight="bold">CXシステム</text>
+    <text x="175" y="430" class="text-small" text-anchor="middle">商品管理・顧客体験</text>
+    <text x="175" y="445" class="text-small" text-anchor="middle">管理: 商品開発G</text>
+    <line x1="300" y1="420" x2="500" y2="150" class="line" marker-end="url(#arrowhead)"/>
+  </g>
+
+  <!-- 部門別システム（右側） -->
+  <g id="dept-systems-right">
+    <!-- トラップ工程管理システム -->
+    <rect x="1100" y="280" width="250" height="80" class="dept-system" rx="5"/>
+    <text x="1225" y="305" class="text-white" text-anchor="middle" font-weight="bold">トラップ工程管理</text>
+    <text x="1225" y="320" class="text-white" text-anchor="middle" font-weight="bold">システム</text>
+    <text x="1225" y="340" class="text-small" text-anchor="middle">検査工程管理</text>
+    <text x="1225" y="355" class="text-small" text-anchor="middle">管理: 異物分析部</text>
+    <line x1="1100" y1="320" x2="900" y2="150" class="line" marker-end="url(#arrowhead)"/>
+
+    <!-- 異物検査システム -->
+    <rect x="1100" y="380" width="250" height="80" class="dept-system" rx="5"/>
+    <text x="1225" y="410" class="text-white" text-anchor="middle" font-weight="bold">異物検査システム</text>
+    <text x="1225" y="430" class="text-small" text-anchor="middle">異物検査業務</text>
+    <text x="1225" y="445" class="text-small" text-anchor="middle">管理: 異物分析部</text>
+    <line x1="1100" y1="420" x2="900" y2="150" class="line" marker-end="url(#arrowhead)"/>
+
+    <!-- 微生物・理化学検査システム -->
+    <rect x="1100" y="480" width="250" height="80" class="dept-system" rx="5"/>
+    <text x="1225" y="505" class="text-white" text-anchor="middle" font-weight="bold">微生物・理化学</text>
+    <text x="1225" y="520" class="text-white" text-anchor="middle" font-weight="bold">検査システム</text>
+    <text x="1225" y="540" class="text-small" text-anchor="middle">検査業務（社内）</text>
+    <text x="1225" y="555" class="text-small" text-anchor="middle">管理: 食品医薬分析部</text>
+    <line x1="1100" y1="520" x2="900" y2="170" class="line" marker-end="url(#arrowhead)"/>
+  </g>
+
+  <!-- クラウドサービス -->
+  <g id="cloud">
+    <rect x="450" y="280" width="200" height="80" class="cloud-service" rx="5"/>
+    <text x="550" y="310" class="text-white" text-anchor="middle" font-weight="bold">AWS環境</text>
+    <text x="550" y="330" class="text-small" text-anchor="middle">システム構築・維持管理</text>
+    <text x="550" y="345" class="text-small" text-anchor="middle">管理: 商品開発G</text>
+    <line x1="600" y1="280" x2="650" y2="200" class="line" marker-end="url(#arrowhead)"/>
+
+    <rect x="750" y="280" width="200" height="80" class="cloud-service" rx="5"/>
+    <text x="850" y="310" class="text-white" text-anchor="middle" font-weight="bold">kintone</text>
+    <text x="850" y="330" class="text-small" text-anchor="middle">業務アプリケーション</text>
+    <text x="850" y="345" class="text-small" text-anchor="middle">アプリ作成・維持管理</text>
+    <text x="850" y="355" class="text-small" text-anchor="middle">管理: 情報システムG</text>
+    <line x1="800" y1="280" x2="750" y2="200" class="line" marker-end="url(#arrowhead)"/>
+  </g>
+
+  <!-- セキュリティ層 -->
+  <g id="security-layer">
+    <rect x="100" y="650" width="1200" height="120" class="security" rx="10"/>
+    <text x="700" y="685" class="text-white" text-anchor="middle" font-size="16px">情報セキュリティ基盤</text>
+    <text x="700" y="710" class="text-small" text-anchor="middle">ISO27001（ISMS）認証維持 | 情報セキュリティ委員会による統制</text>
+    <text x="700" y="730" class="text-small" text-anchor="middle">管理: 情報システムG（事務局業務、セキュリティ教育、ウイルス・脆弱性対応）</text>
+    <text x="700" y="750" class="text-small" text-anchor="middle">社内ネットワーク構築・維持・管理 | 各システムID・アクセス権管理 | サーバー維持管理</text>
+  </g>
+
+  <!-- インフラ層 -->
+  <g id="infrastructure">
+    <rect x="100" y="800" width="350" height="100" fill="#34495e" stroke="#2c3e50" stroke-width="2" rx="5"/>
+    <text x="275" y="830" class="text-white" text-anchor="middle" font-size="14px">社内ネットワーク</text>
+    <text x="275" y="850" class="text-small" text-anchor="middle">構築・維持・管理</text>
+    <text x="275" y="870" class="text-small" text-anchor="middle">管理: 情報システムG</text>
+    <text x="275" y="890" class="text-small" text-anchor="middle">サーバー群の維持・リプレイス</text>
+
+    <rect x="500" y="800" width="400" height="100" fill="#34495e" stroke="#2c3e50" stroke-width="2" rx="5"/>
+    <text x="700" y="830" class="text-white" text-anchor="middle" font-size="14px">エンドユーザー環境</text>
+    <text x="700" y="850" class="text-small" text-anchor="middle">PC、携帯電話、ライセンス等の手配・設定・管理</text>
+    <text x="700" y="870" class="text-small" text-anchor="middle">管理: 情報システムG</text>
+
+    <rect x="950" y="800" width="350" height="100" fill="#34495e" stroke="#2c3e50" stroke-width="2" rx="5"/>
+    <text x="1125" y="830" class="text-white" text-anchor="middle" font-size="14px">認証管理体制</text>
+    <text x="1125" y="850" class="text-small" text-anchor="middle">ISO/IEC17025認定</text>
+    <text x="1125" y="870" class="text-small" text-anchor="middle">登録検査機関認可維持</text>
+    <text x="1125" y="890" class="text-small" text-anchor="middle">管理: 検査信頼性部門</text>
+  </g>
+
+  <!-- データフロー（点線） -->
+  <g id="data-flow">
+    <line x1="700" y1="200" x2="700" y2="280" class="line-data" marker-end="url(#arrowhead-data)"/>
+    <text x="720" y="240" style="font-family: 'Yu Gothic', sans-serif; font-size: 11px; fill: #e67e22; font-weight: bold;">データ連携</text>
+  </g>
+
+  <!-- 凡例 -->
+  <g id="legend">
+    <rect x="50" y="950" width="150" height="25" class="core-system" rx="3"/>
+    <text x="130" y="968" class="text-white" text-anchor="middle" font-size="11px">中核基幹システム</text>
+
+    <rect x="220" y="950" width="150" height="25" class="dept-system" rx="3"/>
+    <text x="300" y="968" class="text-white" text-anchor="middle" font-size="11px">部門別システム</text>
+
+    <rect x="390" y="950" width="150" height="25" class="cloud-service" rx="3"/>
+    <text x="470" y="968" class="text-white" text-anchor="middle" font-size="11px">クラウドサービス</text>
+
+    <rect x="560" y="950" width="150" height="25" class="security" rx="3"/>
+    <text x="640" y="968" class="text-white" text-anchor="middle" font-size="11px">セキュリティ基盤</text>
+
+    <line x1="730" y1="962" x2="800" y2="962" class="line-data" marker-end="url(#arrowhead-data)"/>
+    <text x="850" y="968" style="font-family: 'Yu Gothic', sans-serif; font-size: 11px; fill: #e67e22;">データ連携</text>
+  </g>
+
+  <!-- 特記事項 -->
+  <g id="notes">
+    <rect x="50" y="1000" width="1300" height="180" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="2" rx="5"/>
+    <text x="70" y="1025" style="font-family: 'Yu Gothic', sans-serif; font-size: 14px; font-weight: bold; fill: #2c3e50;">現行システムの特徴と課題</text>
+
+    <text x="70" y="1050" style="font-family: 'Yu Gothic', sans-serif; font-size: 11px; fill: #27ae60; font-weight: bold;">【強み】</text>
+    <text x="70" y="1070" style="font-family: 'Yu Gothic', sans-serif; font-size: 10px; fill: #34495e;">
+      ① 総合経営管理システムを中核とした統合基盤が既に存在
+    </text>
+    <text x="70" y="1085" style="font-family: 'Yu Gothic', sans-serif; font-size: 10px; fill: #34495e;">
+      ② ISO27001認証済みのセキュリティ体制が確立
+    </text>
+    <text x="70" y="1100" style="font-family: 'Yu Gothic', sans-serif; font-size: 10px; fill: #34495e;">
+      ③ 情報システムGによる一元管理体制が整備済み
+    </text>
+
+    <text x="70" y="1125" style="font-family: 'Yu Gothic', sans-serif; font-size: 11px; fill: #e74c3c; font-weight: bold;">【ヒアリングで確認すべき課題】</text>
+    <text x="70" y="1145" style="font-family: 'Yu Gothic', sans-serif; font-size: 10px; fill: #34495e;">
+      ① 部門別システムと総合経営管理システムのデータ連携状況（リアルタイム性、自動化の程度）
+    </text>
+    <text x="70" y="1160" style="font-family: 'Yu Gothic', sans-serif; font-size: 10px; fill: #34495e;">
+      ② データのビジュアル化の進捗状況と活用度
+    </text>
+    <text x="70" y="1175" style="font-family: 'Yu Gothic', sans-serif; font-size: 10px; fill: #34495e;">
+      ③ kintone等のツール活用拡大の余地
+    </text>
+  </g>
+</svg>
