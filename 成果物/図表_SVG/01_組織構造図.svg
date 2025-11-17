@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1600">
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1400"
+     height="1600"
+     viewBox="0 0 1400 1600"
+     preserveAspectRatio="xMidYMid meet">
   <defs>
     <style>
       .title { font-family: 'Yu Gothic', sans-serif; font-size: 24px; font-weight: bold; fill: #2c3e50; }

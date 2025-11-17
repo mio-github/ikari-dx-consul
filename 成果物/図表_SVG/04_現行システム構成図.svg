@@ -1,0 +1,362 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 2400" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .title { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 24px; font-weight: bold; fill: #1a1a1a; }
+      .subtitle { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 14px; fill: #666; }
+      .section-title { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 18px; font-weight: bold; fill: #2c3e50; }
+
+      /* システムボックス */
+      .core-system { fill: #3498db; stroke: #2980b9; stroke-width: 2; }
+      .core-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 12px; font-weight: bold; fill: white; }
+
+      .sub-system { fill: #5dade2; stroke: #3498db; stroke-width: 1.5; }
+      .sub-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 11px; fill: white; }
+
+      .support-system { fill: #85c1e9; stroke: #5dade2; stroke-width: 1; }
+      .support-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 10px; fill: #1a1a1a; }
+
+      .external-system { fill: #95a5a6; stroke: #7f8c8d; stroke-width: 2; }
+      .external-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 11px; fill: white; }
+
+      .inspection-system { fill: #e67e22; stroke: #d35400; stroke-width: 1.5; }
+      .inspection-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 10px; fill: white; }
+
+      .kintone-system { fill: #9b59b6; stroke: #8e44ad; stroke-width: 2; }
+      .kintone-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 11px; font-weight: bold; fill: white; }
+
+      .non-system { fill: #e74c3c; stroke: #c0392b; stroke-width: 1.5; }
+      .non-system-text { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 9px; fill: white; }
+
+      /* 接続線 */
+      .data-flow { stroke: #34495e; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .manual-flow { stroke: #e74c3c; stroke-width: 2; fill: none; stroke-dasharray: 5,5; marker-end: url(#arrowhead-red); }
+      .info-flow { stroke: #9b59b6; stroke-width: 1.5; fill: none; stroke-dasharray: 3,3; }
+
+      .label { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 9px; fill: #2c3e50; }
+      .function-label { font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif; font-size: 8px; fill: #555; }
+    </style>
+
+    <!-- 矢印マーカー -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#34495e" />
+    </marker>
+    <marker id="arrowhead-red" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#e74c3c" />
+    </marker>
+  </defs>
+
+  <!-- タイトル -->
+  <text x="900" y="40" text-anchor="middle" class="title">イカリ消毒 現行システム構成図</text>
+  <text x="900" y="65" text-anchor="middle" class="subtitle">2023年時点（DX構想資料より）</text>
+
+  <!-- 凡例 -->
+  <g transform="translate(50, 90)">
+    <rect x="0" y="0" width="100" height="20" class="core-system" rx="3"/>
+    <text x="50" y="14" text-anchor="middle" class="core-text" font-size="10px">基幹システム</text>
+
+    <rect x="110" y="0" width="100" height="20" class="sub-system" rx="3"/>
+    <text x="160" y="14" text-anchor="middle" class="sub-text" font-size="10px">業務システム</text>
+
+    <rect x="220" y="0" width="100" height="20" class="inspection-system" rx="3"/>
+    <text x="270" y="14" text-anchor="middle" class="inspection-text" font-size="10px">検査システム</text>
+
+    <rect x="330" y="0" width="100" height="20" class="kintone-system" rx="3"/>
+    <text x="380" y="14" text-anchor="middle" class="kintone-text" font-size="10px">Kintone基盤</text>
+
+    <rect x="440" y="0" width="80" height="20" class="non-system" rx="3"/>
+    <text x="480" y="14" text-anchor="middle" class="non-system-text" font-size="10px">非システム</text>
+
+    <line x1="530" y1="10" x2="580" y2="10" class="data-flow"/>
+    <text x="610" y="14" class="label">データ連携</text>
+
+    <line x1="680" y1="10" x2="730" y2="10" class="manual-flow"/>
+    <text x="760" y="14" class="label">手作業連携</text>
+  </g>
+
+  <!-- 外部（取引先） -->
+  <g transform="translate(50, 140)">
+    <text x="0" y="0" class="section-title">【取引先】</text>
+    <rect x="0" y="10" width="200" height="80" class="external-system" rx="5"/>
+    <text x="100" y="35" text-anchor="middle" class="external-text" font-size="13px">取引先システム</text>
+    <text x="100" y="52" text-anchor="middle" class="external-text" font-size="10px">• 顧客企業</text>
+    <text x="100" y="67" text-anchor="middle" class="external-text" font-size="10px">• 仕入先</text>
+    <text x="100" y="82" text-anchor="middle" class="external-text" font-size="10px">• 外注先</text>
+  </g>
+
+  <!-- 社内システム群 -->
+  <g transform="translate(300, 140)">
+    <text x="0" y="0" class="section-title">【イカリ消毒 社内システム】</text>
+  </g>
+
+  <!-- 基幹システム: 総合経営管理システム（スーパーカクテル） -->
+  <g transform="translate(320, 180)">
+    <rect x="0" y="0" width="400" height="180" class="core-system" rx="5"/>
+    <text x="200" y="25" text-anchor="middle" class="core-text" font-size="14px">総合経営管理システム</text>
+    <text x="200" y="43" text-anchor="middle" class="core-text" font-size="12px">（スーパーカクテル）</text>
+
+    <!-- 機能リスト -->
+    <text x="20" y="70" class="function-label" fill="white">【主要機能】</text>
+    <text x="30" y="85" class="function-label" fill="white">• 見積・SR（サービスリクエスト）</text>
+    <text x="30" y="97" class="function-label" fill="white">• 契約管理</text>
+    <text x="30" y="109" class="function-label" fill="white">• 受注・売上管理</text>
+    <text x="30" y="121" class="function-label" fill="white">• 仕入・発注管理</text>
+    <text x="30" y="133" class="function-label" fill="white">• 出荷・入荷管理</text>
+
+    <text x="220" y="85" class="function-label" fill="white">• 請求・売掛管理</text>
+    <text x="220" y="97" class="function-label" fill="white">• 作業指示・作業実績</text>
+    <text x="220" y="109" class="function-label" fill="white">• 在庫・棚卸管理</text>
+    <text x="220" y="121" class="function-label" fill="white">• 顧客情報管理</text>
+    <text x="220" y="133" class="function-label" fill="white">• 営業情報管理・日報</text>
+
+    <text x="30" y="155" class="function-label" fill="white" font-weight="bold">⚠️ 非システム領域が存在（手作業多数）</text>
+  </g>
+
+  <!-- 会計・人事・給与システム -->
+  <g transform="translate(750, 180)">
+    <rect x="0" y="0" width="250" height="80" class="sub-system" rx="4"/>
+    <text x="125" y="20" text-anchor="middle" class="sub-text" font-size="12px">会計・人事・給与</text>
+    <text x="125" y="35" text-anchor="middle" class="sub-text" font-size="11px">（Galileopt NX-Plus）</text>
+    <text x="15" y="52" class="function-label" fill="white">• 財務会計</text>
+    <text x="15" y="64" class="function-label" fill="white">• 人事管理</text>
+    <text x="135" y="52" class="function-label" fill="white">• 管理会計</text>
+    <text x="135" y="64" class="function-label" fill="white">• 給与計算</text>
+  </g>
+
+  <g transform="translate(1020, 180)">
+    <rect x="0" y="0" width="200" height="80" class="sub-system" rx="4"/>
+    <text x="100" y="20" text-anchor="middle" class="sub-text" font-size="12px">勤怠システム</text>
+    <text x="100" y="35" text-anchor="middle" class="sub-text" font-size="11px">（TimePro-VG）</text>
+    <text x="15" y="52" class="function-label" fill="white">• 勤怠管理</text>
+    <text x="15" y="64" class="function-label" fill="white">• 勤怠情報</text>
+  </g>
+
+  <!-- 業務システム群 -->
+  <g transform="translate(320, 390)">
+    <rect x="0" y="0" width="180" height="70" class="sub-system" rx="4"/>
+    <text x="90" y="20" text-anchor="middle" class="sub-text" font-size="11px">CXシステム</text>
+    <text x="90" y="35" text-anchor="middle" class="function-label" fill="white">• Web FOCUS</text>
+    <text x="90" y="47" text-anchor="middle" class="function-label" fill="white">• WEB報告書</text>
+    <text x="90" y="59" text-anchor="middle" class="function-label" fill="white">• LCラボ（予定）</text>
+  </g>
+
+  <g transform="translate(520, 390)">
+    <rect x="0" y="0" width="160" height="50" class="support-system" rx="4"/>
+    <text x="80" y="18" text-anchor="middle" class="support-text" font-size="10px">e-FAX</text>
+    <text x="80" y="32" text-anchor="middle" class="support-text" font-size="9px">（自動FAX送信）</text>
+  </g>
+
+  <g transform="translate(700, 390)">
+    <rect x="0" y="0" width="160" height="50" class="support-system" rx="4"/>
+    <text x="80" y="18" text-anchor="middle" class="support-text" font-size="10px">Office365</text>
+    <text x="80" y="32" text-anchor="middle" class="support-text" font-size="9px">（メール・Office）</text>
+  </g>
+
+  <g transform="translate(880, 390)">
+    <rect x="0" y="0" width="160" height="70" class="support-system" rx="4"/>
+    <text x="80" y="18" text-anchor="middle" class="support-text" font-size="10px">イカリナビ</text>
+    <text x="80" y="32" text-anchor="middle" class="support-text" font-size="9px">• ファイル管理</text>
+    <text x="80" y="44" text-anchor="middle" class="support-text" font-size="9px">• ポータルサイト</text>
+    <text x="80" y="56" text-anchor="middle" class="support-text" font-size="9px">• 社内申請</text>
+  </g>
+
+  <!-- 管理系システム -->
+  <g transform="translate(1060, 390)">
+    <rect x="0" y="0" width="200" height="50" class="support-system" rx="4"/>
+    <text x="100" y="18" text-anchor="middle" class="support-text" font-size="10px">資産管理システム</text>
+    <text x="100" y="32" text-anchor="middle" class="support-text" font-size="9px">（SKY SEA）</text>
+  </g>
+
+  <g transform="translate(1280, 390)">
+    <rect x="0" y="0" width="180" height="50" class="support-system" rx="4"/>
+    <text x="90" y="18" text-anchor="middle" class="support-text" font-size="10px">商品データベース</text>
+    <text x="90" y="32" text-anchor="middle" class="support-text" font-size="9px">（商品情報管理）</text>
+  </g>
+
+  <g transform="translate(1060, 460)">
+    <rect x="0" y="0" width="200" height="50" class="support-system" rx="4"/>
+    <text x="100" y="18" text-anchor="middle" class="support-text" font-size="10px">企業情報管理</text>
+    <text x="100" y="32" text-anchor="middle" class="support-text" font-size="9px">（uSonar）</text>
+  </g>
+
+  <g transform="translate(1280, 460)">
+    <rect x="0" y="0" width="180" height="50" class="support-system" rx="4"/>
+    <text x="90" y="18" text-anchor="middle" class="support-text" font-size="10px">規程文書版管理</text>
+  </g>
+
+  <g transform="translate(1060, 530)">
+    <rect x="0" y="0" width="200" height="50" class="support-system" rx="4"/>
+    <text x="100" y="18" text-anchor="middle" class="support-text" font-size="10px">端末制御</text>
+    <text x="100" y="32" text-anchor="middle" class="support-text" font-size="9px">（NetSkateKOBAN）</text>
+  </g>
+
+  <!-- 検査業務システム群 -->
+  <g transform="translate(50, 500)">
+    <text x="0" y="0" class="section-title">【検査業務システム】</text>
+  </g>
+
+  <g transform="translate(70, 530)">
+    <rect x="0" y="0" width="220" height="130" class="inspection-system" rx="4"/>
+    <text x="110" y="20" text-anchor="middle" class="inspection-text" font-size="11px">検査業務システム</text>
+    <text x="110" y="35" text-anchor="middle" class="inspection-text" font-size="11px">（環境分析）</text>
+    <text x="15" y="55" class="function-label" fill="white">• 検査依頼</text>
+    <text x="15" y="68" class="function-label" fill="white">• 工程管理</text>
+    <text x="15" y="81" class="function-label" fill="white">• 顧客情報</text>
+    <text x="15" y="94" class="function-label" fill="white">• 報告書作成</text>
+    <text x="15" y="107" class="function-label" fill="white">• 経費調整</text>
+    <text x="15" y="120" class="function-label" fill="white">• 検査結果</text>
+  </g>
+
+  <g transform="translate(310, 530)">
+    <rect x="0" y="0" width="220" height="130" class="inspection-system" rx="4"/>
+    <text x="110" y="20" text-anchor="middle" class="inspection-text" font-size="11px">検査業務システム</text>
+    <text x="110" y="35" text-anchor="middle" class="inspection-text" font-size="11px">（微生物分析）</text>
+    <text x="15" y="55" class="function-label" fill="white">• 検査依頼</text>
+    <text x="15" y="68" class="function-label" fill="white">• 工程管理</text>
+    <text x="15" y="81" class="function-label" fill="white">• 顧客情報</text>
+    <text x="15" y="94" class="function-label" fill="white">• 報告書作成</text>
+    <text x="15" y="107" class="function-label" fill="white">• 経費調整</text>
+    <text x="15" y="120" class="function-label" fill="white">• 検査結果</text>
+  </g>
+
+  <g transform="translate(550, 530)">
+    <rect x="0" y="0" width="220" height="130" class="inspection-system" rx="4"/>
+    <text x="110" y="20" text-anchor="middle" class="inspection-text" font-size="11px">検査業務システム</text>
+    <text x="110" y="35" text-anchor="middle" class="inspection-text" font-size="11px">（科学分析/異物分析）</text>
+    <text x="15" y="55" class="function-label" fill="white">• 検査依頼</text>
+    <text x="15" y="68" class="function-label" fill="white">• 工程管理</text>
+    <text x="15" y="81" class="function-label" fill="white">• 顧客情報</text>
+    <text x="15" y="94" class="function-label" fill="white">• 報告書作成</text>
+    <text x="15" y="107" class="function-label" fill="white">• 経費調整</text>
+    <text x="15" y="120" class="function-label" fill="white">• 検査結果</text>
+  </g>
+
+  <g transform="translate(790, 530)">
+    <rect x="0" y="0" width="200" height="100" class="inspection-system" rx="4"/>
+    <text x="100" y="20" text-anchor="middle" class="inspection-text" font-size="11px">トラップ工程</text>
+    <text x="100" y="35" text-anchor="middle" class="inspection-text" font-size="11px">管理システム</text>
+    <text x="15" y="55" class="function-label" fill="white">• 検査依頼</text>
+    <text x="15" y="68" class="function-label" fill="white">• 工程管理</text>
+    <text x="15" y="81" class="function-label" fill="white">• 報告書</text>
+  </g>
+
+  <g transform="translate(1010, 530)">
+    <rect x="0" y="0" width="200" height="100" class="inspection-system" rx="4"/>
+    <text x="100" y="20" text-anchor="middle" class="inspection-text" font-size="11px">異物検査</text>
+    <text x="100" y="35" text-anchor="middle" class="inspection-text" font-size="11px">システム</text>
+    <text x="15" y="55" class="function-label" fill="white">• 顧客情報</text>
+    <text x="15" y="68" class="function-label" fill="white">• 工程管理</text>
+    <text x="15" y="81" class="function-label" fill="white">• 報告書</text>
+  </g>
+
+  <!-- Kintone共通プラットフォーム -->
+  <g transform="translate(320, 690)">
+    <rect x="0" y="0" width="700" height="100" class="kintone-system" rx="5"/>
+    <text x="350" y="25" text-anchor="middle" class="kintone-text" font-size="14px">共通プラットフォーム（Kintone）</text>
+    <text x="350" y="45" text-anchor="middle" class="kintone-text" font-size="11px">★ 複数の業務アプリを構築・運用中</text>
+    <text x="30" y="65" class="function-label" fill="white">• 検査依頼受付</text>
+    <text x="30" y="78" class="function-label" fill="white">• 情報分析</text>
+    <text x="180" y="65" class="function-label" fill="white">• 工程管理</text>
+    <text x="180" y="78" class="function-label" fill="white">• データ共有</text>
+    <text x="330" y="65" class="function-label" fill="white">• 各種申請</text>
+    <text x="330" y="78" class="function-label" fill="white">• 業務連携</text>
+    <text x="480" y="65" class="function-label" fill="white">• カスタムアプリ</text>
+    <text x="480" y="78" class="function-label" fill="white">  （柔軟な構築が可能）</text>
+  </g>
+
+  <!-- 非システム領域（手作業） -->
+  <g transform="translate(1080, 690)">
+    <rect x="0" y="0" width="380" height="120" class="non-system" rx="5"/>
+    <text x="190" y="25" text-anchor="middle" class="non-system-text" font-size="13px">⚠️ 非システム領域（手作業多数）</text>
+    <text x="20" y="45" class="function-label" fill="white">【課題】</text>
+    <text x="30" y="60" class="function-label" fill="white">• Excel/紙での情報管理が多数</text>
+    <text x="30" y="73" class="function-label" fill="white">• データ二重入力</text>
+    <text x="30" y="86" class="function-label" fill="white">• システム間の手作業連携</text>
+    <text x="30" y="99" class="function-label" fill="white">• 情報の散在・属人化</text>
+    <text x="30" y="112" class="function-label" fill="white">• リアルタイム性の欠如</text>
+  </g>
+
+  <!-- データフロー（接続線） -->
+  <!-- 取引先 → 基幹システム -->
+  <line x1="250" y1="180" x2="320" y2="250" class="data-flow"/>
+
+  <!-- 基幹システム → 会計システム -->
+  <line x1="720" y1="250" x2="750" y2="220" class="data-flow"/>
+
+  <!-- 基幹システム → 勤怠システム -->
+  <line x1="720" y1="280" x2="1020" y2="220" class="data-flow"/>
+
+  <!-- 基幹システム → CXシステム -->
+  <line x1="520" y1="360" x2="410" y2="390" class="data-flow"/>
+
+  <!-- 基幹システム → 検査システム（手作業多数） -->
+  <line x1="320" y1="360" x2="180" y2="530" class="manual-flow"/>
+  <line x1="420" y1="360" x2="420" y2="530" class="manual-flow"/>
+  <line x1="520" y1="360" x2="660" y2="530" class="manual-flow"/>
+
+  <!-- 検査システム → Kintone -->
+  <line x1="180" y1="660" x2="400" y2="690" class="info-flow"/>
+  <line x1="420" y1="660" x2="500" y2="690" class="info-flow"/>
+  <line x1="660" y1="660" x2="600" y2="690" class="info-flow"/>
+  <line x1="900" y1="630" x2="700" y2="690" class="info-flow"/>
+
+  <!-- 基幹システム → 非システム領域 -->
+  <line x1="720" y1="320" x2="1080" y2="750" class="manual-flow"/>
+
+  <!-- 問題点の注釈 -->
+  <g transform="translate(50, 850)">
+    <text x="0" y="0" class="section-title" fill="#e74c3c">【現行システム構成の主な課題】</text>
+
+    <rect x="0" y="15" width="700" height="160" fill="#fff" stroke="#e74c3c" stroke-width="2" rx="5"/>
+    <text x="20" y="40" class="label" font-size="11px" font-weight="bold">1. システムのサイロ化</text>
+    <text x="35" y="58" class="label">• 基幹システム、検査システム、Kintone等が個別に稼働</text>
+    <text x="35" y="73" class="label">• システム間のデータ連携が不十分（手作業での転記が多数）</text>
+
+    <text x="20" y="95" class="label" font-size="11px" font-weight="bold">2. 非システム領域の存在</text>
+    <text x="35" y="113" class="label">• Excel/紙での管理が多数残存</text>
+    <text x="35" y="128" class="label">• データの二重入力、手作業による転記ミスのリスク</text>
+
+    <text x="20" y="150" class="label" font-size="11px" font-weight="bold">3. リアルタイム性の欠如</text>
+    <text x="35" y="168" class="label">• データ更新の遅延、意思決定のスピード低下</text>
+
+    <rect x="720" y="15" width="700" height="160" fill="#fff" stroke="#3498db" stroke-width="2" rx="5"/>
+    <text x="740" y="40" class="label" font-size="11px" font-weight="bold" fill="#3498db">【DX推進の方向性】</text>
+    <text x="755" y="58" class="label">✓ データ統合基盤の構築（データウェアハウス/データレイク）</text>
+    <text x="755" y="73" class="label">✓ API連携によるシステム間の自動データ連携</text>
+    <text x="755" y="88" class="label">✓ RPA導入による定型業務の自動化</text>
+    <text x="755" y="103" class="label">✓ BI/ダッシュボードによるリアルタイムデータ可視化</text>
+    <text x="755" y="118" class="label">✓ ペーパーレス化・ワークフロー電子化</text>
+    <text x="755" y="133" class="label">✓ クラウド化によるアクセス性・拡張性の向上</text>
+    <text x="755" y="148" class="label">✓ Kintoneの活用拡大（ノーコード開発による迅速な業務改善）</text>
+  </g>
+
+  <!-- システム数・複雑性の統計 -->
+  <g transform="translate(50, 1050)">
+    <rect x="0" y="0" width="1700" height="100" fill="#ecf0f1" stroke="#95a5a6" stroke-width="1" rx="5"/>
+    <text x="850" y="25" text-anchor="middle" class="section-title">【システム構成サマリー】</text>
+
+    <text x="100" y="50" class="label" font-size="12px" font-weight="bold">基幹システム: 1</text>
+    <text x="100" y="68" class="label">スーパーカクテル</text>
+    <text x="100" y="83" class="label" font-size="9px">（総合経営管理）</text>
+
+    <text x="350" y="50" class="label" font-size="12px" font-weight="bold">業務システム: 10+</text>
+    <text x="350" y="68" class="label" font-size="9px">会計、人事給与、勤怠、CX、</text>
+    <text x="350" y="83" class="label" font-size="9px">検査3種、トラップ、異物等</text>
+
+    <text x="650" y="50" class="label" font-size="12px" font-weight="bold">管理・支援: 7+</text>
+    <text x="650" y="68" class="label" font-size="9px">Office365、イカリナビ、</text>
+    <text x="650" y="83" class="label" font-size="9px">資産管理、端末制御等</text>
+
+    <text x="950" y="50" class="label" font-size="12px" font-weight="bold">共通基盤: 1</text>
+    <text x="950" y="68" class="label">Kintone</text>
+    <text x="950" y="83" class="label" font-size="9px">（ノーコード開発）</text>
+
+    <text x="1200" y="50" class="label" font-size="12px" font-weight="bold" fill="#e74c3c">非システム領域</text>
+    <text x="1200" y="68" class="label" fill="#e74c3c" font-size="9px">Excel/紙での管理多数</text>
+    <text x="1200" y="83" class="label" fill="#e74c3c" font-size="9px">手作業連携が課題</text>
+  </g>
+
+  <!-- フッター -->
+  <rect x="0" y="2350" width="1800" height="50" fill="#ecf0f1"/>
+  <text x="900" y="2375" text-anchor="middle" class="label" font-size="12px">イカリ消毒株式会社 現行システム構成図（2023年時点）</text>
+  <text x="900" y="2390" text-anchor="middle" class="label" font-size="10px">出典: ㊙IKR_DX構想_現行システム構成.pptx | ㊙社外秘</text>
+</svg>
